@@ -6,21 +6,61 @@
   <link rel="stylesheet" href="main.css">
   <title>Shelter</title>
 </head>
-<body class="container">
+<body>
   <header class="header">
-    <div class="logo">
-      <h1 class="heading-1">Cozy House</h1>
-      <h3 class="heading-3">Shelter for pets in Boston</h3>
+    <div class="container">
+      <div class="logo">
+        <h1 class="logo__title">
+          Cozy House
+        </h1>
+        <h3 class="logo__subtitle">
+          Shelter for pets in Boston
+        </h3>
+      </div>
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item">
+            <a href="#" class="navbar__link enabled">
+              About the shelter
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">
+              Our pets
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">
+              Help the shelter
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">
+              Contacts
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul class="navbar__list">
-        <li class="navbar__item"><a href="#" class="navbar__link">About the shelter</a></li>
-        <li class="navbar__item"><a href="#" class="navbar__link">Our pets</a></li>
-        <li class="navbar__item"><a href="#" class="navbar__link">Help the shelter</a></li>
-        <li class="navbar__item"><a href="#" class="navbar__link">Contacts</a></li>
-      </ul>
-    </nav>
   </header>
+  <main>
+    <section class="start-screen">
+      <div class="container">
+        <div class="start-screen__content">
+          <h2 class="start-screen__content__heading">
+            Not only people need a house
+          </h2>
+          <p class="start-screen__content__p">
+            We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!
+          </p>
+          <button class="btn">
+            Make a friend
+          </button>
+        </div>
+        <img class="start-screen__puppy" src="../../assets/start-screen-puppy.png" alt="puppy">
+      </div>
+    </section>
+  </main>
   <script src="main.js"></script>
 </body>
 </html>
