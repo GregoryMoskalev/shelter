@@ -5,7 +5,16 @@
   font-size: 4.4rem;
   line-height: 130%; }
 
-.start-screen__content__p {
+.about__text__heading {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454; }
+
+.start-screen__content__p, .about__text__p {
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
@@ -160,3 +169,30 @@ body {
   margin-top: 41px;
   margin-bottom: 41px;
   color: #cdcdcd; }
+
+.about {
+  height: 58.8rem;
+  background-color: #ffffff; }
+  .about__img {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-self: end;
+    align-self: center;
+    padding-bottom: 1.8rem;
+    padding-right: .5rem; }
+  .about__text {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    padding-left: 11.5rem;
+    align-self: center;
+    width: 43rem;
+    height: 38rem;
+    margin-bottom: 2rem; }
+    .about__text__heading {
+      width: 37rem;
+      margin-bottom: 2.5rem; }
+    .about__text__p {
+      width: 43rem; }
+    .about__text__p:last-child {
+      margin-top: 2.5rem; }

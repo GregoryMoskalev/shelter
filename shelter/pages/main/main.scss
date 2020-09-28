@@ -275,3 +275,49 @@ body {
 
   color: $color-dark-s;
 }
+
+// #### ABOUT ####
+
+.about {
+  height: 58.8rem;
+
+  background-color: $color-light-xl;
+
+  &__img {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-self: end;
+    align-self: center;
+
+    padding-bottom: 1.8rem;
+    padding-right: .5rem;
+  }
+
+  &__text {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    padding-left: 11.5rem;
+    align-self: center;
+
+    width: 43rem;
+    height: 38rem;
+    margin-bottom: 2rem;
+
+    &__heading {
+      width: 37rem;
+      margin-bottom: 2.5rem;
+
+      @extend %h3;
+    }
+
+    &__p {
+      width: 43rem;
+      @extend %subheading;
+    }
+
+    &__p:last-child {
+      margin-top: 2.5rem;
+    }
+  }
+}
