@@ -1,3 +1,35 @@
+.start-screen__content__heading {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.4rem;
+  line-height: 130%; }
+
+.about__text__heading, .pets__heading {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454; }
+
+.pets .carousel__card__heading {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454; }
+
+.start-screen__content__p, .about__text__p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 160%; }
+
 /* Positioning */
 /* Box model */
 /* Typographic */
@@ -23,7 +55,7 @@ body {
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1.7rem;
   line-height: 130%;
   letter-spacing: 0.06em;
   background-color: #f1cdb3;
@@ -36,6 +68,37 @@ body {
 .btn:hover {
   background-color: #fddcc4;
   cursor: pointer; }
+
+.btn__secondary {
+  width: 187px;
+  height: 52px;
+  background-color: transparent;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #4c4c4c;
+  cursor: pointer; }
+
+.btn__secondary:hover {
+  border: none;
+  background-color: #fddcc4; }
+
+.btn-arrow {
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100%;
+  background-color: transparent;
+  cursor: pointer; }
+
+.btn-arrow:hover {
+  border: none;
+  background-color: #fddcc4; }
 
 .container {
   display: grid;
@@ -65,7 +128,7 @@ body {
     font-family: Georgia;
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
+    font-size: 3.2rem;
     line-height: 110%;
     letter-spacing: 0.06em;
     color: #f1cdb3; }
@@ -75,8 +138,8 @@ body {
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
-    font-size: 13px;
-    line-height: 15px;
+    font-size: 1.3rem;
+    line-height: 1.5rem;
     letter-spacing: 0.1em;
     color: #ffffff; }
 
@@ -140,19 +203,99 @@ body {
 .start-screen__content__heading {
   margin: 0;
   width: 310px;
-  font-family: Georgia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 44px;
-  line-height: 130%;
   color: #ffffff; }
 
 .start-screen__content__p {
   margin-top: 41px;
   margin-bottom: 41px;
-  font-family: Arial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 160%;
   color: #cdcdcd; }
+
+.about {
+  height: 58.8rem;
+  background-color: #ffffff; }
+  .about__img {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-self: end;
+    align-self: center;
+    padding-bottom: 1.8rem;
+    padding-right: .5rem; }
+  .about__text {
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    padding-left: 11.5rem;
+    align-self: center;
+    width: 43rem;
+    height: 38rem;
+    margin-bottom: 2rem; }
+    .about__text__heading {
+      width: 37rem;
+      margin-bottom: 2.5rem; }
+    .about__text__p {
+      width: 43rem; }
+    .about__text__p:last-child {
+      margin-top: 2.5rem; }
+
+.pets {
+  height: 877px;
+  background-color: #f6f6f6; }
+  .pets .container {
+    grid-auto-rows: min-content; }
+  .pets .btn-arrow {
+    grid-row: 2 / 3; }
+  .pets .left-arrow {
+    grid-column: 1 / 2;
+    margin-bottom: auto;
+    margin-top: auto; }
+  .pets .right-arrow {
+    grid-column: -2 / -1;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto; }
+  .pets__heading {
+    grid-column: 1 / -1;
+    height: 9rem;
+    margin-top: 8rem;
+    text-align: center; }
+  .pets .carousel {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    height: 43.5rem;
+    width: 99rem;
+    overflow: hidden; }
+    .pets .carousel__list {
+      display: flex;
+      height: 43.5rem;
+      width: 9999px;
+      list-style: none; }
+    .pets .carousel__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      width: 27rem;
+      margin-right: 9rem;
+      border-radius: .9rem;
+      background-color: #fafafa; }
+      .pets .carousel__card__img {
+        display: block;
+        height: 24rem;
+        width: 20rem;
+        margin-top: 3rem; }
+      .pets .carousel__card__heading {
+        margin-top: 3rem; }
+      .pets .carousel__card .btn__secondary {
+        margin-top: 3rem; }
+    .pets .carousel__card:hover {
+      background-color: #ffffff; }
+  .pets__btn {
+    grid-column: 1 / -1;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26rem; }

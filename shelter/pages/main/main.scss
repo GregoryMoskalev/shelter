@@ -127,6 +127,47 @@ body {
   cursor: pointer;
 }
 
+.btn__secondary {
+  width: 187px;
+  height: 52px;
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+
+  letter-spacing: 0.06em;
+
+  color: $color-dark-xl;
+
+  cursor: pointer;
+}
+
+.btn__secondary:hover {
+  border: none;
+  background-color: $color-primary-light;
+}
+
+.btn-arrow {
+  width: 52px;
+  height: 52px;
+
+  border: 2px solid $color-primary;
+  border-radius: 100%;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.btn-arrow:hover {
+  border: none;
+  background-color: $color-primary-light;
+}
+
 .container {
   display: grid;
   /* grid-template-columns: 438px 162px 600px; */
@@ -319,5 +360,110 @@ body {
     &__p:last-child {
       margin-top: 2.5rem;
     }
+  }
+}
+
+// ##### PETS
+
+.pets {
+  height: 877px;
+
+  background-color: $color-light-l;
+
+  & .container {
+    grid-auto-rows: min-content;
+  }
+
+  & .btn-arrow {
+    grid-row: 2 / 3;
+  }
+
+  & .left-arrow {
+    grid-column: 1 / 2;
+
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+
+  & .right-arrow {
+    grid-column: -2 / -1;
+
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+
+    height: 9rem;
+    margin-top: 8rem;
+
+    text-align: center;
+
+    @extend %h3;
+  }
+
+  & .carousel {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    height: 43.5rem;
+    width: 99rem;
+
+    overflow: hidden;
+
+    &__list {
+      display: flex;
+      height: 43.5rem;
+      width: 9999px;
+
+      list-style: none;
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      height: 100%;
+      width: 27rem;
+      margin-right: 9rem;
+
+      border-radius: .9rem;
+      background-color: $color-light-s;
+
+      &__img {
+        display: block;
+        height: 24rem;
+        width: 20rem;
+        margin-top: 3rem;
+      }
+
+      &__heading {
+        margin-top: 3rem;
+        @extend %h4;
+      }
+
+      & .btn__secondary {
+        margin-top: 3rem;
+      }
+    }
+
+    &__card:hover {
+      background-color: $color-light-xl;
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26rem;
   }
 }
