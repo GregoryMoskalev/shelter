@@ -1,3 +1,58 @@
+.start-screen__content__heading {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 4.4rem;
+  line-height: 130%;
+}
+
+.about__text__heading, .pets__heading, .help__container__heading, .donation__content .info__heading {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.pets .carousel__card__heading, .help__list__item__heading, .donation__content .info .credit-card__number {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.donation__content .info__subheading {
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #545454;
+}
+
+.start-screen__content__p, .about__text__p {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+
+.donation__content .info__legal {
+  font-family: Arial;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 150%;
+  color: #b2b2b2;
+}
+
 /* Positioning */
 /* Box model */
 /* Typographic */
@@ -27,7 +82,7 @@ body {
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1.7rem;
   line-height: 130%;
   letter-spacing: 0.06em;
   background-color: #f1cdb3;
@@ -42,6 +97,42 @@ body {
 .btn:hover {
   background-color: #fddcc4;
   cursor: pointer;
+}
+
+.btn__secondary {
+  width: 187px;
+  height: 52px;
+  background-color: transparent;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  font-family: Georgia;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #4c4c4c;
+  cursor: pointer;
+}
+
+.btn__secondary:hover {
+  border: none;
+  background-color: #fddcc4;
+}
+
+.btn-arrow {
+  width: 52px;
+  height: 52px;
+  padding-top: 2px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn-arrow:hover {
+  border: none;
+  background-color: #fddcc4;
 }
 
 .container {
@@ -90,7 +181,7 @@ body {
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 3.2rem;
   line-height: 110%;
   letter-spacing: 0.06em;
   color: #f1cdb3;
@@ -102,8 +193,8 @@ body {
   font-family: Arial;
   font-style: normal;
   font-weight: normal;
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 1.3rem;
+  line-height: 1.5rem;
   letter-spacing: 0.1em;
   color: #ffffff;
 }
@@ -183,21 +274,294 @@ body {
 .start-screen__content__heading {
   margin: 0;
   width: 310px;
-  font-family: Georgia;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 44px;
-  line-height: 130%;
   color: #ffffff;
 }
 
 .start-screen__content__p {
   margin-top: 41px;
   margin-bottom: 41px;
-  font-family: Arial;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 160%;
   color: #cdcdcd;
+}
+
+.about {
+  height: 58.8rem;
+  background-color: #ffffff;
+}
+
+.about__img {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: end;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-bottom: 1.8rem;
+  padding-right: .5rem;
+}
+
+.about__text {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 11.5rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 43rem;
+  height: 38rem;
+  margin-bottom: 2rem;
+}
+
+.about__text__heading {
+  width: 37rem;
+  margin-bottom: 2.5rem;
+}
+
+.about__text__p {
+  width: 43rem;
+}
+
+.about__text__p:last-child {
+  margin-top: 2.5rem;
+}
+
+.pets {
+  height: 877px;
+  background-color: #f6f6f6;
+}
+
+.pets .container {
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+}
+
+.pets .btn-arrow {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+}
+
+.pets .left-arrow {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.pets .right-arrow {
+  grid-column: -2 / -1;
+  margin-left: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.pets__heading {
+  grid-column: 1 / -1;
+  height: 9rem;
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.pets .carousel {
+  grid-column: 1 / -1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  height: 43.5rem;
+  width: 99rem;
+  overflow: hidden;
+}
+
+.pets .carousel__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 43.5rem;
+  width: 9999px;
+  list-style: none;
+}
+
+.pets .carousel__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 27rem;
+  margin-right: 9rem;
+  border-radius: .9rem;
+  background-color: #fafafa;
+}
+
+.pets .carousel__card__img {
+  display: block;
+  height: 24rem;
+  width: 20rem;
+  margin-top: 3rem;
+}
+
+.pets .carousel__card__heading {
+  margin-top: 3rem;
+}
+
+.pets .carousel__card .btn__secondary {
+  margin-top: 3rem;
+}
+
+.pets .carousel__card:hover {
+  background-color: #ffffff;
+}
+
+.pets__btn {
+  grid-column: 1 / -1;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 26rem;
+}
+
+.help {
+  height: 61rem;
+  background-color: #ffffff;
+}
+
+.help__container {
+  width: 120rem;
+  height: 43rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 8rem;
+}
+
+.help__container__heading {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.help__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 102.9rem;
+  height: 28rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5.5rem 12rem;
+  list-style: none;
+}
+
+.help__list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 113px;
+}
+
+.help__list__item__img {
+  height: 60px;
+  width: 60px;
+}
+
+.help__list__item__heading {
+  margin-top: 3rem;
+}
+
+.donation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 46.4rem;
+  background-color: #f6f6f6;
+}
+
+.donation__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 8.2rem;
+  height: 28.4rem;
+}
+
+.donation__content__sad-doggo-img {
+  margin-top: 1.1rem;
+  height: 26rem;
+}
+
+.donation__content .info {
+  padding-left: 3rem;
+}
+
+.donation__content .info__heading {
+  width: 30rem;
+  padding-bottom: 2rem;
+}
+
+.donation__content .info__subheading {
+  padding-bottom: 2rem;
+}
+
+.donation__content .info .credit-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 9px;
+  width: 35rem;
+  background-color: #f1cdb3;
+}
+
+.donation__content .info .credit-card__icon {
+  padding: 1rem 1.5rem;
+}
+
+.donation__content .info .credit-card__number {
+  padding: 1rem 1.5rem 1rem 0;
+}
+
+.donation__content .info__legal {
+  padding-top: 2rem;
+  width: 38rem;
 }
