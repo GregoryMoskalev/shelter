@@ -84,8 +84,6 @@ $color-primary-light: #fddcc4;
   margin: 0;
   padding: 0;
 
-  font-size: 62.5%;
-
   box-sizing: border-box;
 }
 
@@ -145,10 +143,12 @@ body {
   color: $color-dark-xl;
 
   cursor: pointer;
+
+  transition: all .3s;
 }
 
 .btn__secondary:hover {
-  border: none;
+  border: 2px solid $color-primary-light;
   background-color: $color-primary-light;
 }
 
@@ -156,17 +156,17 @@ body {
   width: 52px;
   height: 52px;
 
-  padding-top: 2px;
-
   border: 2px solid $color-primary;
   border-radius: 100%;
   background-color: transparent;
 
   cursor: pointer;
+
+  transition: all .3s;
 }
 
 .btn-arrow:hover {
-  border: none;
+  border: 2px solid $color-primary-light;
   background-color: $color-primary-light;
 }
 
@@ -439,6 +439,8 @@ body {
       border-radius: .9rem;
       background-color: $color-light-s;
 
+      transition: all .3s;
+
       &__img {
         display: block;
         height: 24rem;
@@ -478,7 +480,7 @@ body {
 
   &__container {
     width: 120rem;
-    height: 43rem;
+    height: 53rem;
     margin-left: auto;
     margin-right: auto;
     padding-top: 8rem;
@@ -558,11 +560,14 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        text-decoration: none;
 
         border-radius: 9px;
 
         width: 35rem;
         background-color: $color-primary;
+
+        transition: all .3s;
 
         &__icon {
           padding: 1rem 1.5rem;
@@ -574,10 +579,98 @@ body {
         }
       }
 
+      & .credit-card:hover {
+        background-color: $color-primary-light;
+      }
+
       &__legal {
         padding-top: 2rem;
         width: 38rem;
         @extend %paragraph-s;
+      }
+    }
+  }
+}
+
+//###### FOOTER
+
+.footer {
+  height: 35.5rem;
+
+  background: url('../../assets/noise_transparent@2x.png'),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4rem;
+
+    &__img {
+      width: 30rem;
+      height: 31.5rem;
+    }
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2.3rem;
+      margin-right: 16rem;
+
+      &.contacts {
+        width: 27.9rem;
+        margin-right: 16rem;
+
+        & > .column__heading {
+          margin-bottom: 4.2rem;
+        }
+
+        & .column__link:not(:last-child) {
+          margin-bottom: 4.3rem;
+        }
+      }
+
+      &.location {
+        width: 30.2rem;
+
+        & > .column__heading {
+          margin-bottom: 3.2rem;
+        }
+
+        & .column__link:not(:last-child) {
+          margin-bottom: 3.3rem;
+        }
+      }
+
+      & .column__heading {
+        margin-bottom: 3rem;
+
+        @extend %h3;
+
+        color: $color-light-xl;
+      }
+
+      & .column__link {
+        display: flex;
+        align-items: center;
+        text-decoration-line: none;
+
+        color: $color-primary;
+
+        transition: all .3s;
+
+        &__text {
+          @extend %h4;
+          padding-left: 2rem;
+
+          color: inherit;
+        }
+      }
+
+      & .column__link:hover {
+        color: $color-light-s;
       }
     }
   }

@@ -6,7 +6,7 @@
   line-height: 130%;
 }
 
-.about__text__heading, .pets__heading, .help__container__heading, .donation__content .info__heading {
+.about__text__heading, .pets__heading, .help__container__heading, .donation__content .info__heading, .footer__content__column .column__heading {
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;
@@ -16,7 +16,7 @@
   color: #545454;
 }
 
-.pets .carousel__card__heading, .help__list__item__heading, .donation__content .info .credit-card__number {
+.pets .carousel__card__heading, .help__list__item__heading, .donation__content .info .credit-card__number, .footer__content__column .column__link__text {
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;
@@ -564,4 +564,57 @@ body {
 .donation__content .info__legal {
   padding-top: 2rem;
   width: 38rem;
+}
+
+.footer {
+  height: 35.5rem;
+  background: url("../../assets/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 120rem;
+  margin: auto;
+  padding-top: 6rem;
+  gap: 15rem;
+}
+
+.footer__content__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer__content__column .column__heading {
+  margin-bottom: 4.5rem;
+}
+
+.footer__content__column .column__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #f1cdb3;
+}
+
+.footer__content__column .column__link__text {
+  padding-left: 2rem;
+}
+
+.footer__content__column .column__link:last-child {
+  margin-top: 3.5rem;
 }

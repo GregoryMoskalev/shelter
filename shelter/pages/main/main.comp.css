@@ -5,7 +5,7 @@
   font-size: 4.4rem;
   line-height: 130%; }
 
-.about__text__heading, .pets__heading, .help__container__heading, .donation__content .info__heading {
+.about__text__heading, .pets__heading, .help__container__heading, .donation__content .info__heading, .footer__content__column .column__heading {
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;
@@ -14,7 +14,7 @@
   letter-spacing: 0.06em;
   color: #545454; }
 
-.pets .carousel__card__heading, .help__list__item__heading, .donation__content .info .credit-card__number {
+.pets .carousel__card__heading, .help__list__item__heading, .donation__content .info .credit-card__number, .footer__content__column .column__link__text {
   font-family: Georgia;
   font-style: normal;
   font-weight: normal;
@@ -55,7 +55,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 62.5%;
   box-sizing: border-box; }
 
 html {
@@ -99,23 +98,24 @@ body {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #4c4c4c;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .3s; }
 
 .btn__secondary:hover {
-  border: none;
+  border: 2px solid #fddcc4;
   background-color: #fddcc4; }
 
 .btn-arrow {
   width: 52px;
   height: 52px;
-  padding-top: 2px;
   border: 2px solid #f1cdb3;
   border-radius: 100%;
   background-color: transparent;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all .3s; }
 
 .btn-arrow:hover {
-  border: none;
+  border: 2px solid #fddcc4;
   background-color: #fddcc4; }
 
 .container {
@@ -299,7 +299,8 @@ body {
       width: 27rem;
       margin-right: 9rem;
       border-radius: .9rem;
-      background-color: #fafafa; }
+      background-color: #fafafa;
+      transition: all .3s; }
       .pets .carousel__card__img {
         display: block;
         height: 24rem;
@@ -323,7 +324,7 @@ body {
   background-color: #ffffff; }
   .help__container {
     width: 120rem;
-    height: 43rem;
+    height: 53rem;
     margin-left: auto;
     margin-right: auto;
     padding-top: 8rem; }
@@ -374,13 +375,63 @@ body {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        text-decoration: none;
         border-radius: 9px;
         width: 35rem;
-        background-color: #f1cdb3; }
+        background-color: #f1cdb3;
+        transition: all .3s; }
         .donation__content .info .credit-card__icon {
           padding: 1rem 1.5rem; }
         .donation__content .info .credit-card__number {
           padding: 1rem 1.5rem 1rem 0; }
+      .donation__content .info .credit-card:hover {
+        background-color: #fddcc4; }
       .donation__content .info__legal {
         padding-top: 2rem;
         width: 38rem; }
+
+.footer {
+  height: 35.5rem;
+  background: url("../../assets/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20; }
+  .footer__content {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 4rem; }
+    .footer__content__img {
+      width: 30rem;
+      height: 31.5rem; }
+    .footer__content__column {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2.3rem;
+      margin-right: 16rem; }
+      .footer__content__column.contacts {
+        width: 27.9rem;
+        margin-right: 16rem; }
+        .footer__content__column.contacts > .column__heading {
+          margin-bottom: 4.2rem; }
+        .footer__content__column.contacts .column__link:not(:last-child) {
+          margin-bottom: 4.3rem; }
+      .footer__content__column.location {
+        width: 30.2rem; }
+        .footer__content__column.location > .column__heading {
+          margin-bottom: 3.2rem; }
+        .footer__content__column.location .column__link:not(:last-child) {
+          margin-bottom: 3.3rem; }
+      .footer__content__column .column__heading {
+        margin-bottom: 3rem;
+        color: #ffffff; }
+      .footer__content__column .column__link {
+        display: flex;
+        align-items: center;
+        text-decoration-line: none;
+        color: #f1cdb3;
+        transition: all .3s; }
+        .footer__content__column .column__link__text {
+          padding-left: 2rem;
+          color: inherit; }
+      .footer__content__column .column__link:hover {
+        color: #fafafa; }
