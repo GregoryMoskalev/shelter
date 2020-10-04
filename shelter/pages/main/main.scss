@@ -12,8 +12,38 @@ $color-dark-3xl: #292929;
 $color-primary: #f1cdb3;
 $color-primary-light: #fddcc4;
 
+@font-face {
+  font-family: 'Georgia';
+
+  src: url('../../assets/fonts/Georgia\ Regular\ font.ttf');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial';
+
+  src: url('../../assets/fonts/arial.ttf');
+
+  font-weight: normal;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arial';
+
+  src: url('../../assets/fonts/ariali.ttf');
+
+  font-weight: normal;
+
+  font-style: italic;
+}
+
 %h2 {
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 4.4rem;
@@ -21,7 +51,7 @@ $color-primary-light: #fddcc4;
 }
 
 %h3 {
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 3.5rem;
@@ -33,7 +63,7 @@ $color-primary-light: #fddcc4;
 }
 
 %h4 {
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
@@ -45,7 +75,7 @@ $color-primary-light: #fddcc4;
 }
 
 %h5 {
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
@@ -57,7 +87,7 @@ $color-primary-light: #fddcc4;
 }
 
 %subheading {
-  font-family: Arial;
+  font-family: 'Arial';
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
@@ -65,7 +95,7 @@ $color-primary-light: #fddcc4;
 }
 
 %paragraph-s {
-  font-family: Arial;
+  font-family: 'Arial';
   font-style: italic;
   font-weight: normal;
   font-size: 1.2rem;
@@ -102,7 +132,7 @@ body {
   width: 207px;
   height: 52px;
 
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.7rem;
@@ -132,7 +162,7 @@ body {
   border: 2px solid $color-primary;
   border-radius: 100px;
 
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -202,7 +232,7 @@ body {
   &__title {
     margin: 0;
 
-    font-family: Georgia;
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 3.2rem;

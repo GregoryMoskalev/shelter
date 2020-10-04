@@ -1,12 +1,30 @@
+@font-face {
+  font-family: 'Georgia';
+  src: url("../../assets/fonts/Georgia Regular font.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Arial';
+  src: url("../../assets/fonts/arial.ttf");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Arial';
+  src: url("../../assets/fonts/ariali.ttf");
+  font-weight: normal;
+  font-style: italic; }
+
 .start-screen__content__heading {
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 4.4rem;
   line-height: 130%; }
 
 .about__text__heading, .pets__heading, .help__container__heading, .donation__content .info__heading, .footer__content__column .column__heading {
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 3.5rem;
@@ -15,7 +33,7 @@
   color: #545454; }
 
 .pets .carousel__card__heading, .help__list__item__heading, .donation__content .info .credit-card__number, .footer__content__column .column__link__text {
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 2rem;
@@ -24,7 +42,7 @@
   color: #545454; }
 
 .donation__content .info__subheading {
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
@@ -33,14 +51,14 @@
   color: #545454; }
 
 .start-screen__content__p, .about__text__p {
-  font-family: Arial;
+  font-family: 'Arial';
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
   line-height: 160%; }
 
 .donation__content .info__legal {
-  font-family: Arial;
+  font-family: 'Arial';
   font-style: italic;
   font-weight: normal;
   font-size: 1.2rem;
@@ -68,7 +86,7 @@ body {
 .btn {
   width: 207px;
   height: 52px;
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.7rem;
@@ -91,7 +109,7 @@ body {
   background-color: transparent;
   border: 2px solid #f1cdb3;
   border-radius: 100px;
-  font-family: Georgia;
+  font-family: 'Georgia', serif;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -143,7 +161,7 @@ body {
   justify-content: space-between; }
   .logo__title {
     margin: 0;
-    font-family: Georgia;
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: normal;
     font-size: 3.2rem;
