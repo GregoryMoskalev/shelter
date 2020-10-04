@@ -199,7 +199,7 @@ body {
   border: 1px solid #000000;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   /* ############### TODO png size  ../../assets/noise_transparent.png for retina ##################*/
-  background: url(../../assets/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20; }
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20; }
 
 .start-screen__puppy {
   /* Positioning */
@@ -392,7 +392,7 @@ body {
 
 .footer {
   height: 35.5rem;
-  background: url("../../assets/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20; }
+  background: url("../../assets/images/noise_transparent@2x.png"), radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20; }
   .footer__content {
     display: flex;
     flex-direction: row;
