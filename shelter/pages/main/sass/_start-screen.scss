@@ -1,0 +1,62 @@
+.start-screen {
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  /* ############### TODO png size  ../../assets/noise_transparent.png for retina ##################*/
+
+  background: url(../../assets/images/noise_transparent@2x.png),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+
+  &__container {
+    display: flex;
+    margin: 18rem auto 0;
+    max-width: 120rem;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $bp-large) {
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.start-screen__puppy {
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 9.8rem;
+    margin-left: 14rem;
+    height: 59.3rem;
+  }
+}
+
+.start-screen__content {
+  margin-top: 16.2rem;
+  width: 46rem;
+
+  @media only screen and (max-width: $bp-large) {
+    margin-top: 15rem;
+  }
+
+  &__btn {
+    @media only screen and (max-width: $bp-large) {
+      display: block;
+      margin: auto;
+    }
+  }
+}
+
+.start-screen__content__heading {
+  margin-bottom: 4rem;
+  width: 31rem;
+  @extend %h2;
+
+  color: $color-light-xl;
+}
+
+.start-screen__content__p {
+  margin-bottom: 4.4rem;
+
+  @extend %subheading;
+
+  color: $color-dark-s;
+}

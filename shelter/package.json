@@ -14,10 +14,10 @@
     "postcss-cli": "^7.1.1"
   },
   "scripts": {
-    "watch:sass-main": "node-sass pages/main/main.scss pages/main/main.css -w",
+    "watch:sass-main": "node-sass pages/main/sass/main.scss pages/main/main.css -w",
     "devserver-main": "live-server",
-    "start-main": "npm-run-all --parallel devserver watch:pages/main",
-    "compile:sass-main": "node-sass pages/main/main.scss pages/main/main.comp.css",
+    "start-main": "npm-run-all --parallel devserver watch:sass/main",
+    "compile:sass-main": "node-sass pages/main/sass/main.scss pages/main/main.comp.css",
     "concat:css-main": "concat -o pages/main/main.concat.css pages/main/main.comp.css",
     "prefix:css-main": "postcss --use autoprefixer -b \"last 10 versions\" pages/main/main.concat.css -o pages/main/main.prefix.css",
     "compress:css-main": "node-sass pages/main/main.prefix.css pages/main/main.css --output-style compressed",

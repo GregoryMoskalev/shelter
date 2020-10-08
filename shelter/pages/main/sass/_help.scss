@@ -1,0 +1,47 @@
+.help {
+  height: 61rem;
+  background-color: $color-light-xl;
+
+  &__container {
+    width: 120rem;
+    height: 53rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 8rem;
+
+    &__heading {
+      margin-bottom: 6rem;
+      @extend %h3;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 102.9rem;
+    height: 28rem;
+    justify-content: center;
+
+    gap: 5.5rem 12rem;
+
+    list-style: none;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 113px;
+
+      &__img {
+        height: 60px;
+        width: 60px;
+      }
+
+      &__heading {
+        margin-top: 3rem;
+        @extend %h4;
+      }
+    }
+  }
+}
