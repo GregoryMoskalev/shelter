@@ -529,7 +529,7 @@ body {
     .footer__content__column {
       display: flex;
       flex-direction: column;
-      padding-top: 1.5rem; }
+      padding-top: 2rem; }
       @media only screen and (max-width: 19.9375em) {
         .footer__content__column .column__heading {
           text-align: center; } }
@@ -578,7 +578,7 @@ body {
   .footer__img {
     width: 30rem;
     height: 31rem;
-    margin-top: 3.8rem;
+    margin-top: 4rem;
     margin-right: 4rem; }
     @media only screen and (max-width: 47.9375em) {
       .footer__img {
