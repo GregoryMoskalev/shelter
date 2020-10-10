@@ -3,32 +3,23 @@
 
   background-color: $color-light-l;
 
-  & .container {
-    grid-auto-rows: min-content;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
 
-  & .btn-arrow {
-    grid-row: 2 / 3;
-  }
+  // & .btn-arrow {
+  // }
 
-  & .left-arrow {
-    grid-column: 1 / 2;
+  // & .left-arrow {
+  // }
 
-    margin-bottom: auto;
-    margin-top: auto;
-  }
-
-  & .right-arrow {
-    grid-column: -2 / -1;
-
-    margin-left: auto;
-    margin-bottom: auto;
-    margin-top: auto;
-  }
+  // & .right-arrow {
+  // }
 
   &__heading {
-    grid-column: 1 / -1;
-
     height: 9rem;
     margin-top: 8rem;
 
@@ -38,9 +29,6 @@
   }
 
   & .carousel {
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
-
     margin-left: auto;
     margin-right: auto;
     margin-top: 6rem;
@@ -49,6 +37,12 @@
     width: 99rem;
 
     overflow: hidden;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
 
     &__list {
       display: flex;

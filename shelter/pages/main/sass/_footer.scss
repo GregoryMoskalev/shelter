@@ -40,7 +40,7 @@
     &__column {
       display: flex;
       flex-direction: column;
-      padding-top: 2rem;
+      padding-top: 1.5rem;
 
       & .column__heading {
         @media only screen and (max-width: $bp-small) {
