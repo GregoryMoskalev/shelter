@@ -1,6 +1,4 @@
 .pets {
-  height: 877px;
-
   background-color: $color-light-l;
 
   &__container {
@@ -8,20 +6,39 @@
     flex-direction: column;
     margin-left: 4rem;
     margin-right: 4rem;
+    padding-bottom: 10rem;
 
     @media only screen and (max-width: $bp-large) {
       margin: 0 3rem;
     }
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0;
+      padding-bottom: 4.2rem;
+    }
   }
 
-  // & .btn-arrow {
-  // }
+  & .btn-arrow {
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: .5rem;
+      justify-self: center;
+    }
+  }
 
-  // & .left-arrow {
-  // }
+  & .left-arrow {
+    @media only screen and (max-width: $bp-medium) {
+      margin-left: 2.7rem;
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
+  }
 
-  // & .right-arrow {
-  // }
+  & .right-arrow {
+    @media only screen and (max-width: $bp-medium) {
+      margin-right: 2.7rem;
+      grid-row: 2 / 3;
+      grid-column: 2 / -1;
+    }
+  }
 
   &__heading {
     height: 9rem;
@@ -30,6 +47,19 @@
     text-align: center;
 
     @extend %h3;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 4.5rem;
+      width: 100%;
+
+      font-family: 'Georgia', serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 2.5rem;
+      line-height: 130%;
+
+      letter-spacing: 0.06em;
+    }
   }
 
   & .carousel {
@@ -37,16 +67,30 @@
     height: 43.5rem;
     width: 99rem;
 
+    overflow: hidden;
+
     @media only screen and (max-width: $bp-large) {
       padding-left: 1rem;
     }
 
-    overflow: hidden;
+    @media only screen and (max-width: $bp-medium) {
+      padding-left: 2.5rem;
+      margin: 1.5rem auto;
+
+      grid-row: 1 / 2;
+      grid-column: 1 / -1;
+    }
 
     &__container {
       display: flex;
       flex-direction: row;
       align-items: center;
+
+      @media only screen and (max-width: $bp-medium) {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, max-content);
+      }
     }
 
     &__list {
@@ -100,10 +144,13 @@
   }
 
   &__btn {
-    grid-column: 1 / -1;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     width: 26rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 4.2rem;
+    }
   }
 }

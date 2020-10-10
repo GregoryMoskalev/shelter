@@ -394,20 +394,48 @@ body {
           margin-top: 2rem; } }
 
 .pets {
-  height: 877px;
   background-color: #f6f6f6; }
   .pets__container {
     display: flex;
     flex-direction: column;
     margin-left: 4rem;
-    margin-right: 4rem; }
+    margin-right: 4rem;
+    padding-bottom: 10rem; }
     @media only screen and (max-width: 79.9375em) {
       .pets__container {
         margin: 0 3rem; } }
+    @media only screen and (max-width: 47.9375em) {
+      .pets__container {
+        margin: 0;
+        padding-bottom: 4.2rem; } }
+  @media only screen and (max-width: 47.9375em) {
+    .pets .btn-arrow {
+      margin-top: .5rem;
+      justify-self: center; } }
+  @media only screen and (max-width: 47.9375em) {
+    .pets .left-arrow {
+      margin-left: 2.7rem;
+      grid-row: 2 / 3;
+      grid-column: 1 / 2; } }
+  @media only screen and (max-width: 47.9375em) {
+    .pets .right-arrow {
+      margin-right: 2.7rem;
+      grid-row: 2 / 3;
+      grid-column: 2 / -1; } }
   .pets__heading {
     height: 9rem;
     margin-top: 8rem;
     text-align: center; }
+    @media only screen and (max-width: 47.9375em) {
+      .pets__heading {
+        margin-top: 4.5rem;
+        width: 100%;
+        font-family: 'Georgia', serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5rem;
+        line-height: 130%;
+        letter-spacing: 0.06em; } }
   .pets .carousel {
     margin: 6rem auto;
     height: 43.5rem;
@@ -416,10 +444,21 @@ body {
     @media only screen and (max-width: 79.9375em) {
       .pets .carousel {
         padding-left: 1rem; } }
+    @media only screen and (max-width: 47.9375em) {
+      .pets .carousel {
+        padding-left: 2.5rem;
+        margin: 1.5rem auto;
+        grid-row: 1 / 2;
+        grid-column: 1 / -1; } }
     .pets .carousel__container {
       display: flex;
       flex-direction: row;
       align-items: center; }
+      @media only screen and (max-width: 47.9375em) {
+        .pets .carousel__container {
+          display: grid;
+          grid-template-columns: repeat(2, 50%);
+          grid-template-rows: repeat(2, max-content); } }
     .pets .carousel__list {
       display: flex;
       height: 43.5rem;
@@ -451,11 +490,13 @@ body {
     .pets .carousel__card:hover {
       background-color: #ffffff; }
   .pets__btn {
-    grid-column: 1 / -1;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
     width: 26rem; }
+    @media only screen and (max-width: 47.9375em) {
+      .pets__btn {
+        margin-top: 4.2rem; } }
 
 .help {
   background-color: #ffffff; }
