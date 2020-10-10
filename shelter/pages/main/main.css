@@ -447,17 +447,31 @@ body {
 .donation {
   display: flex;
   justify-content: center;
-  height: 46.4rem;
+  padding-bottom: 9.5rem;
   background-color: #f6f6f6; }
+  @media only screen and (max-width: 79.9375em) {
+    .donation {
+      padding-bottom: 10rem; } }
   .donation__content {
     display: flex;
     margin-top: 8.2rem;
     height: 28.4rem; }
+    @media only screen and (max-width: 79.9375em) {
+      .donation__content {
+        flex-direction: column;
+        height: 100%; } }
     .donation__content__sad-doggo-img {
       margin-top: 1.1rem;
       height: 26rem; }
+      @media only screen and (max-width: 79.9375em) {
+        .donation__content__sad-doggo-img {
+          margin-top: 6rem; } }
     .donation__content .info {
       padding-left: 3rem; }
+      @media only screen and (max-width: 79.9375em) {
+        .donation__content .info {
+          order: -1;
+          padding-left: 6rem; } }
       .donation__content .info__heading {
         width: 30rem;
         padding-bottom: 2rem; }
