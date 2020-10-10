@@ -92,6 +92,8 @@ body {
 
   cursor: pointer;
 
+  flex-shrink: 0;
+
   transition: all .3s;
 }
 

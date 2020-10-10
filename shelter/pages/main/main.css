@@ -133,6 +133,7 @@ body {
   border-radius: 100%;
   background-color: transparent;
   cursor: pointer;
+  flex-shrink: 0;
   transition: all .3s; }
 
 .btn-arrow:hover {
@@ -347,18 +348,21 @@ body {
     flex-direction: column;
     margin-left: 4rem;
     margin-right: 4rem; }
+    @media only screen and (max-width: 79.9375em) {
+      .pets__container {
+        margin: 0 3rem; } }
   .pets__heading {
     height: 9rem;
     margin-top: 8rem;
     text-align: center; }
   .pets .carousel {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin: 6rem auto;
     height: 43.5rem;
     width: 99rem;
     overflow: hidden; }
+    @media only screen and (max-width: 79.9375em) {
+      .pets .carousel {
+        padding-left: 1rem; } }
     .pets .carousel__container {
       display: flex;
       flex-direction: row;
@@ -379,6 +383,9 @@ body {
       border-radius: .9rem;
       background-color: #fafafa;
       transition: all .3s; }
+      @media only screen and (max-width: 79.9375em) {
+        .pets .carousel__card {
+          margin-right: 4rem; } }
       .pets .carousel__card__img {
         display: block;
         height: 27rem;

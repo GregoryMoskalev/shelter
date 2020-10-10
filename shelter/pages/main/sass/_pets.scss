@@ -8,6 +8,10 @@
     flex-direction: column;
     margin-left: 4rem;
     margin-right: 4rem;
+
+    @media only screen and (max-width: $bp-large) {
+      margin: 0 3rem;
+    }
   }
 
   // & .btn-arrow {
@@ -29,12 +33,13 @@
   }
 
   & .carousel {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin: 6rem auto;
     height: 43.5rem;
     width: 99rem;
+
+    @media only screen and (max-width: $bp-large) {
+      padding-left: 1rem;
+    }
 
     overflow: hidden;
 
@@ -66,6 +71,10 @@
       background-color: $color-light-s;
 
       transition: all .3s;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-right: 4rem;
+      }
 
       &__img {
         display: block;
