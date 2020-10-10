@@ -405,13 +405,13 @@ body {
     width: 26rem; }
 
 .help {
-  height: 61rem;
   background-color: #ffffff; }
   .help__container {
-    width: 120rem;
-    height: 53rem;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10rem;
     padding-top: 8rem; }
     .help__container__heading {
       margin-bottom: 6rem;
@@ -420,16 +420,24 @@ body {
     display: flex;
     margin: auto;
     flex-wrap: wrap;
-    width: 102.9rem;
+    width: 103rem;
     height: 28rem;
     justify-content: center;
     gap: 5.5rem 12rem;
     list-style: none; }
+    @media only screen and (max-width: 79.9375em) {
+      .help__list {
+        width: 63rem;
+        height: 44.9rem;
+        gap: 5.5rem 6rem; } }
     .help__list__item {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      height: 113px; }
+      align-items: center; }
+      @media only screen and (max-width: 79.9375em) {
+        .help__list__item {
+          height: 11.3rem;
+          width: 17rem; } }
       .help__list__item__img {
         height: 60px;
         width: 60px; }

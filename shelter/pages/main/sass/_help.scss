@@ -1,12 +1,13 @@
 .help {
-  height: 61rem;
   background-color: $color-light-xl;
 
   &__container {
-    width: 120rem;
-    height: 53rem;
+    display: flex;
+    flex-direction: column;
+
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10rem;
     padding-top: 8rem;
 
     &__heading {
@@ -20,18 +21,29 @@
     display: flex;
     margin: auto;
     flex-wrap: wrap;
-    width: 102.9rem;
+    width: 103rem;
     height: 28rem;
     justify-content: center;
 
     gap: 5.5rem 12rem;
 
     list-style: none;
+
+    @media only screen and (max-width: $bp-large) {
+      width: 63rem;
+      height: 44.9rem;
+      gap: 5.5rem 6rem;
+    }
+
     &__item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      height: 113px;
+
+      @media only screen and (max-width: $bp-large) {
+        height: 11.3rem;
+        width: 17rem;
+      }
 
       &__img {
         height: 60px;
