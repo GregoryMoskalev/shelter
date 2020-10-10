@@ -9,13 +9,13 @@
 
   overflow: hidden;
 
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: $bp-large) {
     height: 64rem;
 
     flex-direction: column;
   }
 
-  @media only screen and (max-width: $bp-small) {
+  @media only screen and (max-width: $bp-medium) {
     height: 94.3rem;
   }
 
@@ -27,12 +27,12 @@
     margin-left: 4rem;
     padding-top: 3.8rem;
 
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large) {
       padding-top: 1rem;
       margin-left: 6.5rem;
     }
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-medium) {
       flex-direction: column;
       margin-left: 0rem;
     }
@@ -43,7 +43,7 @@
       padding-top: 2rem;
 
       & .column__heading {
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-medium) {
           text-align: center;
         }
       }
@@ -52,11 +52,11 @@
         width: 30rem;
         margin-right: 14rem;
 
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
           margin-right: 3.8rem;
         }
 
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-medium) {
           margin-left: 2rem;
           width: 28rem;
         }
@@ -73,11 +73,11 @@
       &.location {
         width: 30.2rem;
 
-        @media only screen and (max-width: $bp-medium) {
+        @media only screen and (max-width: $bp-large) {
           width: 32.2rem;
         }
 
-        @media only screen and (max-width: $bp-small) {
+        @media only screen and (max-width: $bp-medium) {
           width: 30rem;
           padding-top: 4.3rem;
           margin-left: 1rem;
@@ -129,11 +129,11 @@
     margin-top: 4rem;
     margin-right: 4rem;
 
-    @media only screen and (max-width: $bp-medium) {
+    @media only screen and (max-width: $bp-large) {
       margin-left: 23.4rem;
     }
 
-    @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-medium) {
       margin-left: 1rem;
     }
   }

@@ -48,6 +48,16 @@
   color: $color-dark-l;
 }
 
+%h3-mobile {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.5rem;
+  line-height: 130%;
+
+  letter-spacing: 0.06em;
+}
+
 %h4 {
   font-family: 'Georgia', serif;
   font-style: normal;

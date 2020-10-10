@@ -10,19 +10,25 @@
 
     @media only screen and (max-width: $bp-large) {
       flex-direction: column;
-      padding-bottom: 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
     }
   }
 
   &__img {
     margin-right: 12rem;
-    display: flex;
-    justify-self: end;
-    align-self: center;
 
     @media only screen and (max-width: $bp-large) {
       margin-top: 8rem;
       margin-right: 0rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 4.5rem;
+      height: 35.3rem;
     }
   }
 
@@ -40,20 +46,50 @@
       order: -1;
     }
 
+    @media only screen and (max-width: $bp-medium) {
+      height: 49.4rem;
+    }
+
     &__heading {
       width: 37rem;
       margin-bottom: 2.4rem;
 
       @extend %h3;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0 auto 2.4rem;
+        max-width: 30rem;
+        padding-bottom: .4rem;
+        text-align: center;
+
+        font-family: 'Georgia', serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 2.5rem;
+        line-height: 130%;
+
+        letter-spacing: 0.06em;
+      }
     }
 
     &__p {
       width: 100%;
       @extend %subheading;
+
+      @media only screen and (max-width: $bp-medium) {
+        max-width: 27rem;
+        margin: 0 auto;
+
+        text-align: justify;
+      }
     }
 
     &__p:last-child {
       margin-top: 2.5rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        margin-top: 2rem;
+      }
     }
   }
 }

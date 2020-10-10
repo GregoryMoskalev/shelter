@@ -27,6 +27,12 @@
     margin-left: 14rem;
     height: 59.3rem;
   }
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 10.4rem;
+    margin-left: 4rem;
+    height: 27.1rem;
+  }
 }
 
 .start-screen__content {
@@ -51,6 +57,19 @@
   @extend %h2;
 
   color: $color-light-xl;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0 auto 4rem;
+    width: 30rem;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5rem;
+    line-height: 130%;
+
+    letter-spacing: 0.06em;
+  }
 }
 
 .start-screen__content__p {
@@ -59,4 +78,10 @@
   @extend %subheading;
 
   color: $color-dark-s;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0 auto 4.4rem;
+    width: 30rem;
+    text-align: center;
+  }
 }
