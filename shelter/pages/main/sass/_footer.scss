@@ -16,7 +16,7 @@
   }
 
   @media only screen and (max-width: $bp-medium) {
-    height: 94.3rem;
+    height: 80.9rem;
   }
 
   &__content {
@@ -45,6 +45,12 @@
       & .column__heading {
         @media only screen and (max-width: $bp-medium) {
           text-align: center;
+
+          font-family: 'Georgia', serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 2.5rem;
+          line-height: 130%;
         }
       }
 
@@ -57,16 +63,32 @@
         }
 
         @media only screen and (max-width: $bp-medium) {
-          margin-left: 2rem;
-          width: 28rem;
+          margin: auto;
+          width: 30rem;
         }
 
         & > .column__heading {
           margin-bottom: 4.2rem;
+
+          @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 3rem;
+          }
+        }
+
+        & .column__link {
+          display: flex;
+          justify-content: center;
+          height: 4.6rem;
+          width: 30rem;
+          margin: auto;
         }
 
         & .column__link:not(:last-child) {
           margin-bottom: 4.3rem;
+
+          @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 3rem;
+          }
         }
       }
 
@@ -78,17 +100,26 @@
         }
 
         @media only screen and (max-width: $bp-medium) {
+          justify-self: center;
           width: 30rem;
-          padding-top: 4.3rem;
+          padding-top: 3.3rem;
           margin-left: 1rem;
         }
 
         & > .column__heading {
           margin-bottom: 3.2rem;
+
+          @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 4rem;
+          }
         }
 
         & .column__link:not(:last-child) {
           margin-bottom: 3.3rem;
+
+          @media only screen and (max-width: $bp-medium) {
+            margin-bottom: 4rem;
+          }
         }
       }
 
@@ -98,6 +129,11 @@
         @extend %h3;
 
         color: $color-light-xl;
+
+        @media only screen and (max-width: $bp-medium) {
+          width: 27rem;
+          margin: auto;
+        }
       }
 
       & .column__link {
@@ -134,7 +170,9 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
-      margin-left: 1rem;
+      margin-left: 3rem;
+      width: 26rem;
+      height: 27rem;
     }
   }
 }
