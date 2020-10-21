@@ -83,12 +83,25 @@
     display: none;
   }
 
+  &__button {
+    height: 6rem;
+    width: 6rem;
+    position: absolute;
+    top: 0rem;
+    right: 3.8rem;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: all .4s;
+
+    cursor: pointer;
+  }
+
   &__icon {
     position: absolute;
-    margin-top: 2.9rem;
-    margin-right: 2.3rem;
     visibility: hidden;
-
+    z-index: 1000;
+    top: 2.9rem;
+    left: 1.5rem;
     @media only screen and (max-width: $bp-medium) {
       position: relative;
       visibility: visible;
@@ -107,13 +120,31 @@
       content: "";
       position: absolute;
       left: 0;
-      transition: all .2s;
     }
     &::before {
       top: -1rem;
     }
     &::after {
       top: 1rem;
+    }
+  }
+
+  &__checkbox:checked + &__button {
+    @media only screen and (max-width: $bp-medium) {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__checkbox:checked ~ .navbar__list {
+    @media only screen and (max-width: $bp-medium) {
+      transform: translateX(-35rem);
+      opacity: 1;
+    }
+  }
+  &__checkbox:checked ~ .navbar__list > .navbar__item {
+    @media only screen and (max-width: $bp-medium) {
+      opacity: 1;
+      // background-color: orange;
     }
   }
 }
@@ -123,9 +154,36 @@
   justify-content: space-between;
   padding-top: 16px;
   list-style: none;
+  transition: all .4s;
 
   @media only screen and (max-width: $bp-medium) {
-    display: none;
+    opacity: 0;
+
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+
+    width: 32rem;
+    height: 100vh;
+    top: -3rem;
+    padding-top: 2.5rem;
+    right: -35rem;
+    background-color: $color-dark-3xl;
+  }
+}
+
+.navbar__item {
+  @media only screen and (max-width: $bp-medium) {
+    height: 5.1rem;
+    opacity: 0;
+    // background-color: orange;
+  }
+}
+
+.navbar__item:not(:last-child) {
+  @media only screen and (max-width: $bp-medium) {
+    margin-bottom: 4rem;
   }
 }
 
@@ -139,6 +197,16 @@
   padding-bottom: 4px;
 
   color: $color-dark-s;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 160%;
+
+    padding-bottom: 0px;
+  }
 }
 
 .navbar__link:hover {
@@ -148,8 +216,9 @@
 .navbar__link.enabled {
   color: $color-light-s;
   border-bottom: 3px solid $color-primary;
-}
 
-/* .navbar__item:not(:last-child) {
-  margin-right: 36px;
-} */
+  @media only screen and (max-width: $bp-medium) {
+    height: 5.4rem;
+    padding-bottom: 7px;
+  }
+}
