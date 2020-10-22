@@ -1,5 +1,6 @@
 .popup {
-  // visibility: hidden;
+  visibility: hidden;
+  opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,6 +12,11 @@
   z-index: 9999;
   background: $color-blackout;
   transition: all .3s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
 
   &__wrapper {
     display: flex;
