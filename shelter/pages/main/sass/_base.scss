@@ -83,6 +83,9 @@ body {
 }
 
 .btn-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 52px;
   height: 52px;
 
@@ -95,6 +98,8 @@ body {
   flex-shrink: 0;
 
   transition: all .3s;
+
+
 }
 
 .btn-arrow:hover {

@@ -84,7 +84,7 @@
         </div>
       </div>
     </section>
-    <section class="pets">
+    <section class="pets" id="pets">
       <div class="pets__container">
         <h3 class="pets__heading">
           Our friends who <br> are looking for a house
@@ -257,18 +257,21 @@
     <img class="footer__img" src="../../assets/images/footer-puppy.png" alt="puppy">
   </footer>
   <div class="popup" id="popup">
-    <a href="#" class="popup__close">&times;</a>
-    <div class="popup__content">
+    <div class="popup__wrapper">
+      <button href="#pets" class="popup__close btn-arrow"><img  src="../../assets/icons/Vector.svg" alt="X"></button>
+      <div class="popup__content">
       <div class="popup__image">
         <img src="../../assets/images/pets-jennifer.jpg" alt="jennifer">
       </div>
       <div class="popup__text">
-        <h3 class="popup__heading">
-          Jennifer
-        </h3>
-        <h4 class="popup__subheading">
-          Dog - Labrador
-        </h4>
+        <div class="popup__pet-logo">
+          <h3 class="popup__heading">
+            Jennifer
+          </h3>
+          <h4 class="popup__subheading">
+            Dog - Labrador
+          </h4>
+        </div>
         <p class="popup__p">
           Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
         </p>
@@ -296,6 +299,7 @@
           </li>
         </ul>
       </div>
+    </div>
     </div>
   </div>
   </div>

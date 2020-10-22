@@ -135,6 +135,9 @@ body {
   background-color: #fddcc4; }
 
 .btn-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 52px;
   height: 52px;
   border: 2px solid #f1cdb3;
@@ -874,6 +877,7 @@ body {
         height: 27rem; } }
 
 .popup {
+  visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -885,8 +889,18 @@ body {
   z-index: 9999;
   background: rgba(41, 41, 41, 0.6);
   transition: all .3s; }
+  .popup__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 95rem;
+    margin-bottom: 11.5rem;
+    margin-left: 5rem; }
+  .popup__close {
+    align-self: flex-end;
+    margin-right: 1rem; }
   .popup__content {
     display: flex;
+    justify-content: space-between;
     background: #fafafa;
     width: 90rem;
     height: 50rem;
@@ -894,19 +908,26 @@ body {
     overflow: hidden; }
   .popup__image > img {
     width: 50rem;
-    height: 50rem; }
+    height: 50rem;
+    margin-right: 1rem; }
   .popup__text {
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    width: 35rem;
+    margin-right: 2rem; }
+  .popup__pet-logo {
+    margin-top: 1rem;
+    margin-bottom: 4rem; }
   .popup__heading {
     margin-bottom: 1rem; }
-  .popup__subheading {
-    margin-bottom: 4rem; }
   .popup__p {
+    line-height: 1.7rem;
     margin-bottom: 4rem; }
   .popup__list {
-    list-style: none; }
+    list-style: none;
+    margin-bottom: 4.8rem;
+    padding-left: 1rem; }
   .popup__list-item::before {
     content: "\2022";
     color: #f1cdb3;
@@ -915,6 +936,6 @@ body {
     width: 1em;
     margin-left: -1em; }
   .popup__list-item:not(:last-child) {
-    margin-bottom: 1rem; }
+    margin-bottom: 1.2rem; }
   .popup__list-item-h5 {
     display: inline; }
