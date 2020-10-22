@@ -246,12 +246,25 @@ body {
     .navbar__checkbox:checked + .navbar__button {
       transform: rotate(90deg); } }
   @media only screen and (max-width: 47.9375em) {
-    .navbar__checkbox:checked ~ .navbar__list {
+    .navbar__checkbox:checked ~ .blackout {
+      background: rgba(41, 41, 41, 0.6); } }
+  @media only screen and (max-width: 47.9375em) {
+    .navbar__checkbox:checked ~ .blackout > .navbar__list {
       transform: translateX(-35rem);
       opacity: 1; } }
   @media only screen and (max-width: 47.9375em) {
-    .navbar__checkbox:checked ~ .navbar__list > .navbar__item {
+    .navbar__checkbox:checked ~ .blackout > .navbar__list > .navbar__item {
       opacity: 1; } }
+
+@media only screen and (max-width: 47.9375em) {
+  .blackout {
+    background-color: transparent;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all .4s; } }
 
 .navbar__list {
   display: flex;

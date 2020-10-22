@@ -135,17 +135,35 @@
     }
   }
 
-  &__checkbox:checked ~ .navbar__list {
+  &__checkbox:checked ~ .blackout {
+    @media only screen and (max-width: $bp-medium) {
+      background: rgba(41, 41, 41, 0.6);
+    }
+  }
+
+  &__checkbox:checked ~ .blackout > .navbar__list {
     @media only screen and (max-width: $bp-medium) {
       transform: translateX(-35rem);
       opacity: 1;
     }
   }
-  &__checkbox:checked ~ .navbar__list > .navbar__item {
+  &__checkbox:checked ~ .blackout > .navbar__list > .navbar__item {
     @media only screen and (max-width: $bp-medium) {
       opacity: 1;
       // background-color: orange;
     }
+  }
+}
+
+.blackout {
+  @media only screen and (max-width: $bp-medium) {
+    background-color: transparent;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: all .4s;
   }
 }
 
