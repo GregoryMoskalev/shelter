@@ -1,0 +1,79 @@
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background: $color-blackout;
+  transition: all .3s;
+
+  &__content {
+    display: flex;
+    background: $color-light-s;
+    width: 90rem;
+    height: 50rem;
+    border-radius: 9px;
+    overflow: hidden;
+  }
+
+  &__image > img {
+    width: 50rem;
+    height: 50rem;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__heading {
+    @extend %h3;
+
+    margin-bottom: 1rem;
+  }
+
+  &__subheading {
+    @extend %h4;
+
+    margin-bottom: 4rem;
+  }
+
+  &__p {
+    @extend %h5;
+
+    margin-bottom: 4rem;
+  }
+
+  &__list {
+    list-style: none;
+    // display: flex;
+    // flex-direction: column;
+  }
+
+  &__list-item {
+    @extend %h5;
+  }
+
+  &__list-item::before {
+    content: "\2022";
+    color: $color-primary;
+    display: inline-block;
+    font-weight: bold;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__list-item-h5 {
+    @extend %h5-modal-window;
+    display: inline;
+  }
+}

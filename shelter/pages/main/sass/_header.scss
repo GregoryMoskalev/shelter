@@ -137,7 +137,7 @@
 
   &__checkbox:checked ~ .blackout {
     @media only screen and (max-width: $bp-medium) {
-      background: rgba(41, 41, 41, 0.6);
+      background: $color-blackout;
     }
   }
 
