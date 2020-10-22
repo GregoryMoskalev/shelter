@@ -23,6 +23,12 @@ body {
   width: 100%;
 }
 
+.disable-scroll {
+  margin: 0 !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+}
+
 .wrapper {
   margin: auto;
   max-width: 128rem;
