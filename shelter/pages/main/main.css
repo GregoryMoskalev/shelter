@@ -384,10 +384,13 @@ body {
   @media only screen and (max-width: 79.9375em) {
     .start-screen__content {
       margin-top: 15rem; } }
-  @media only screen and (max-width: 79.9375em) {
-    .start-screen__content__btn {
-      display: block;
-      margin: auto; } }
+  .start-screen__content__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 79.9375em) {
+      .start-screen__content__btn {
+        margin: auto; } }
 
 .start-screen__content__heading {
   margin-bottom: 4rem;
@@ -584,6 +587,9 @@ body {
     .pets .slider__card:hover {
       background-color: #ffffff; }
   .pets__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;

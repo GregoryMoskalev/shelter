@@ -152,6 +152,9 @@
   }
 
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;

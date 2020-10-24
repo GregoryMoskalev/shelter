@@ -190,7 +190,7 @@ createSlides = (slideList) => {
 
   for (let i = 0; i < slideList.length; i += cardsInSlide) {
     const cardList = slideList.slice(i, i + cardsInSlide);
-    elem.innerHTML += `<ul class="slide">${createCard(cardList)}</ul>`;
+    elem.innerHTML += `<ul class="slide swiper-slide">${createCard(cardList)}</ul>`;
   }
 
   sliderCards = document.querySelectorAll('.slider__card');

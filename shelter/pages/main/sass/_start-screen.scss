@@ -44,8 +44,10 @@
   }
 
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media only screen and (max-width: $bp-large) {
-      display: block;
       margin: auto;
     }
   }
