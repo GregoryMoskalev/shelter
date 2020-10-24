@@ -176,21 +176,16 @@ createCard = (cardList) => {
 createSlides = (slideList) => {
   const elem = document.querySelector('.slides');
   let cardsInSlide = 1;
-  if (
-    document.querySelector('body').offsetWidth >= 768 &&
-    document.querySelector('body').offsetWidth < 1280
-  ) {
+  elem.innerHTML = '';
+  if (document.querySelector('body').offsetWidth >= 1280) {
     cardsInSlide = 3;
-  } else if (
-    document.querySelector('body').offsetWidth < 768 &&
-    document.querySelector('body').offsetWidth >= 320
-  ) {
+  } else if (document.querySelector('body').offsetWidth >= 768) {
     cardsInSlide = 2;
   }
 
   for (let i = 0; i < slideList.length; i += cardsInSlide) {
     const cardList = slideList.slice(i, i + cardsInSlide);
-    elem.innerHTML += `<ul class="slide swiper-slide">${createCard(cardList)}</ul>`;
+    elem.innerHTML += `<ul class="slide">${createCard(cardList)}</ul>`;
   }
 
   sliderCards = document.querySelectorAll('.slider__card');
@@ -261,6 +256,7 @@ menuItems.forEach((item) => {
   item.addEventListener('click', () => (burger.checked = false));
 });
 
+window.addEventListener('resize', () => createSlides(fullPetsList));
 // sliderCards.forEach((item) => {
 //   console.log(item.dataset.id);
 //   item.addEventListener('click', openPopup);
