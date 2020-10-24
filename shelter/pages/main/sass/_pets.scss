@@ -95,12 +95,13 @@
     }
 
     & > .slides {
+      position: relative;
+      right: 0;
       display: flex;
       width: 9999px;
       height: 43.5rem;
 
       & > .slide {
-        position: relative;
         display: flex;
         flex-direction: row;
         list-style: none;

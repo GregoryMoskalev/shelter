@@ -552,11 +552,12 @@ body {
           grid-template-columns: repeat(2, 50%);
           grid-template-rows: repeat(2, max-content); } }
     .pets .slider > .slides {
+      position: relative;
+      right: 0;
       display: flex;
       width: 9999px;
       height: 43.5rem; }
       .pets .slider > .slides > .slide {
-        position: relative;
         display: flex;
         flex-direction: row;
         list-style: none; }

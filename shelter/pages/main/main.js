@@ -1,5 +1,8 @@
+
 console.log('ヾ(＾∇＾)');
 const burger = document.querySelector('.navbar__checkbox'),
+  slider = document.getElementById('slider'),
+  sliderItems = document.getElementById('slides'),
   sliderList = document.querySelector('.slider__list'),
   petsBtns = document.querySelectorAll('.card-btn'),
   burgerBlackout = document.querySelector('.blackout'),
@@ -66,36 +69,40 @@ request.onload = () => {
   console.log(request.response);
 };
 
-fetch('../../pets.json').then((res) => res.json()).then((list, row = 3) => {
-  pets = list;
+fetch('../../pets.json')
+  .then((res) => res.json())
+  .then((list, row = 3) => {
+    pets = list;
 
-  fullPetsList = (() => {
-    let tempArr = [];
+    fullPetsList = (() => {
+      let tempArr = [];
 
-    for (let i = 0; i < row; i++) {
-      const newPets = pets;
+      for (let i = 0; i < row; i++) {
+        const newPets = pets;
 
-      for (let j = pets.length; j > 0; j--) {
-        let randInd = Math.floor(Math.random() * j);
-        const randElem = newPets.splice(randInd, 1)[0];
-        newPets.push(randElem);
+        for (let j = pets.length; j > 0; j--) {
+          let randInd = Math.floor(Math.random() * j);
+          const randElem = newPets.splice(randInd, 1)[0];
+          newPets.push(randElem);
+        }
+
+        tempArr = [ ...tempArr, ...newPets ];
       }
+      return tempArr;
+    })();
 
-      tempArr = [ ...tempArr, ...newPets ];
-    }
-    return tempArr;
-  })();
+    fullPetsList = sort863(fullPetsList);
 
-  fullPetsList = sort863(fullPetsList);
-
-  createSlides(fullPetsList);
-
-  sliderCards.forEach((item) => {
-    let id = item.dataset.id;
-    // console.log(id);
-    item.addEventListener('click', () => openPopup(id));
+    createSlides(fullPetsList);
+  })
+  .then(() => {
+    sliderCards.forEach((item) => {
+      let id = item.dataset.id;
+      // console.log(id);
+      item.addEventListener('click', () => openPopup(id));
+    });
   });
-});
+
 request.onload = () => {
   pets = JSON.parse(request.response);
 };
@@ -154,7 +161,70 @@ const sort6recursively = (list) => {
   console.log(list);
   return list;
 };
-//########## slider ###########
+//########## slider ###########\
+
+// function slide(wrapper, items, prev, next) {
+//   let slides = items.querySelectorAll('.slide'),
+//     slidesLength = slides.length,
+//     slideSize = 1080,
+//     firstSlide = slides[0],
+//     lastSlide = slides[slidesLength - 1],
+//     cloneFirst = firstSlide.cloneNode(true),
+//     cloneLast = lastSlide.cloneNode(true),
+//     index = 0,
+//     allowShift = true;
+
+//   items.appendChild(cloneFirst);
+//   items.appendChild(cloneLast, firstSlide);
+
+//   // Click events
+//   prev.addEventListener('click', function() {
+//     shiftSlide(-1);
+//   });
+//   next.addEventListener('click', function() {
+//     shiftSlide(1);
+//   });
+//   // Transition events
+//   items.addEventListener('transitionend', checkIndex);
+
+//   function shiftSlide(dir, action) {
+//     items.classList.add('shifting');
+
+//     if (allowShift) {
+//       if (!action) {
+//         posInitial = items.offsetLeft;
+//       }
+
+//       if (dir == 1) {
+//         items.style.left = -1080 + 'px';
+//         index++;
+//       } else if (dir == -1) {
+//         items.style.left = 1080 + 'px';
+//         index--;
+//       }
+//     }
+
+//     allowShift = false;
+//   }
+
+//   function checkIndex() {
+//     items.classList.remove('shifting');
+
+//     if (index == -1) {
+//       items.style.left = -(slidesLength * slideSize) + 'px';
+//       index = slidesLength - 1;
+//     }
+
+//     if (index == slidesLength) {
+//       items.style.left = -(1 * slideSize) + 'px';
+//       index = 0;
+//     }
+
+//     allowShift = true;
+//   }
+// }
+
+//######
 
 createCard = (cardList) => {
   let str = '';
@@ -185,7 +255,7 @@ createSlides = (slideList) => {
 
   for (let i = 0; i < slideList.length; i += cardsInSlide) {
     const cardList = slideList.slice(i, i + cardsInSlide);
-    elem.innerHTML += `<ul class="slide">${createCard(cardList)}</ul>`;
+    elem.innerHTML += `<ul class="slide swiper-slide">${createCard(cardList)}</ul>`;
   }
 
   sliderCards = document.querySelectorAll('.slider__card');
@@ -261,3 +331,5 @@ window.addEventListener('resize', () => createSlides(fullPetsList));
 //   console.log(item.dataset.id);
 //   item.addEventListener('click', openPopup);
 // });
+
+// next.addEventListener('click', slide);
