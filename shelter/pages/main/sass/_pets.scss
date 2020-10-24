@@ -24,7 +24,7 @@
     }
   }
 
-  & .left-arrow {
+  & .prev {
     @media only screen and (max-width: $bp-medium) {
       margin-left: 2.7rem;
       grid-row: 2 / 3;
@@ -32,7 +32,7 @@
     }
   }
 
-  & .right-arrow {
+  & .next {
     @media only screen and (max-width: $bp-medium) {
       margin-right: 2.7rem;
       grid-row: 2 / 3;
@@ -62,7 +62,7 @@
     }
   }
 
-  & .carousel {
+  & .slider {
     margin: 6rem auto;
     height: 43.5rem;
     width: 99rem;
@@ -71,10 +71,11 @@
 
     @media only screen and (max-width: $bp-large) {
       padding-left: 1rem;
+      width: 58rem;
     }
 
     @media only screen and (max-width: $bp-medium) {
-      padding-left: 2.5rem;
+      width: 27rem;
       margin: 1.5rem auto;
 
       grid-row: 1 / 2;
@@ -93,12 +94,17 @@
       }
     }
 
-    &__list {
+    & > .slides {
       display: flex;
-      height: 43.5rem;
       width: 9999px;
+      height: 43.5rem;
 
-      list-style: none;
+      & > .slide {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+      }
     }
 
     &__card {
@@ -115,6 +121,8 @@
       background-color: $color-light-s;
 
       transition: all .3s;
+
+      cursor: pointer;
 
       @media only screen and (max-width: $bp-large) {
         margin-right: 4rem;
