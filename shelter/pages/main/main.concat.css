@@ -113,6 +113,7 @@ body {
   outline: none;
   border: none;
   border-radius: 100px;
+  text-decoration: none;
   transition: all .3s; }
 
 .btn:hover {
