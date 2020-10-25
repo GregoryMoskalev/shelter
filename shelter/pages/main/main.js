@@ -282,4 +282,3 @@ sliderCards.forEach((item) => {
   item.addEventListener('click', openPopup);
 });
 
-let swiper;

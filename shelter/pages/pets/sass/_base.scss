@@ -1,0 +1,134 @@
+*::-webkit-scrollbar {
+  @media only screen and (max-width: $bp-large) {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px
+
+  background: #e5e5e5;
+
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.disable-scroll {
+  // position: absolute;
+  // margin: 0 !important;
+  // max-height: 100vh !important;
+  overflow: hidden !important;
+}
+
+.wrapper {
+  margin: auto;
+  max-width: 128rem;
+}
+
+.btn {
+  width: 207px;
+  height: 52px;
+
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+
+  background-color: $color-primary;
+  color: $color-dark-xl;
+
+  outline: none;
+  border: none;
+  border-radius: 100px;
+  text-decoration: none;
+
+  transition: all .3s;
+}
+
+.btn:hover {
+  background-color: $color-primary-light;
+
+  cursor: pointer;
+}
+
+.btn__secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 187px;
+  height: 52px;
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+
+  font-family: 'Georgia', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 130%;
+  text-decoration: none;
+
+  letter-spacing: 0.06em;
+
+  color: $color-dark-xl;
+
+  cursor: pointer;
+
+  transition: all .3s;
+}
+
+.btn__secondary:hover {
+  border: 2px solid $color-primary-light;
+  background-color: $color-primary-light;
+}
+
+.btn-round {
+  @extend %h4;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  padding-bottom: 4px;
+
+  border: 2px solid $color-primary;
+  border-radius: 100%;
+  background-color: transparent;
+  text-decoration: none;
+  color: $color-dark-3xl;
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition: all .3s;
+}
+
+.btn-round:hover {
+  border: 2px solid $color-primary-light;
+  background-color: $color-primary-light;
+}
+
+.container {
+  display: grid;
+  /* grid-template-columns: 438px 162px 600px; */
+  grid-template-columns: 480px 720px;
+  margin: auto;
+
+  width: 1200px;
+  height: 100%;
+}

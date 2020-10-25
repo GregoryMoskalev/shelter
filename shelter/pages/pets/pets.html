@@ -8,131 +8,69 @@
 </head>
 <body>
   <div class='wrapper'>
-    <header class="header">
-      <div class="logo">
-        <h1 class="logo__title">
-          Cozy House
-        </h1>
-        <h3 class="logo__subtitle">
-          Shelter for pets in Boston
-        </h3>
+    <header class="header"  name="top">
+      <div class="header__container">
+        <div class="logo">
+          <h1 class="logo__title">
+            Cozy House
+          </h1>
+          <h3 class="logo__subtitle">
+            Shelter for pets in Boston
+          </h3>
+        </div>
+        <nav class="navbar">
+          <input type="checkbox" class="navbar__checkbox" id="navi-toggle">
+          <label for="navi-toggle" class="navbar__button">
+            <span class="navbar__icon">&nbsp;</span>
+          </label>
+          <div class="blackout">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a href="../main/main.html" class="navbar__link">
+                  About the shelter
+                </a>
+              </li>
+              <li class="navbar__item">
+                <a href="../pets/pets.html" class="navbar__link  enabled">
+                  Our pets
+                </a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link" disabled>
+                  Help the shelter
+                </a>
+              </li>
+              <li class="navbar__item">
+                <a href="#" class="navbar__link" disabled>
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <nav class="navbar">
-        <input type="checkbox" class="navbar__checkbox" id="navi-toggle">
-        <label for="navi-toggle" class="navbar__button">
-          <span class="navbar__icon">&nbsp;</span>
-        </label>
-        <ul class="navbar__list">
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">
-              About the shelter
-            </a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link enabled">
-              Our pets
-            </a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">
-              Help the shelter
-            </a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">
-              Contacts
-            </a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <main>
-      <section class="pets">
+      <section id="pets" class="pets">
         <div class="pets__content">
           <h3 class="pets__content__heading">
             Our friends who<br>are looking for a house
           </h3>
-          <ul class="cards-list">
-            <li class="cards-list__card">
-              <img class="cards-list__card__img" src="../../assets/images/pets-katrine.jpg" alt="cat photo">
-              <h4 class="cards-list__card__heading">
-                Katrine
-              </h4>
-              <button class="btn__secondary">
-                Learn more
-              </button>
-            </li>
-            <li class="cards-list__card">
-              <img class="cards-list__card__img" src="../../assets/images/pets-jennifer.jpg" alt="puppy photo">
-              <h4 class="cards-list__card__heading">
-                Jennifer
-              </h4>
-              <button class="btn__secondary">
-                Learn more
-              </button>
-            </li>
-            <li class="cards-list__card">
-              <img class="cards-list__card__img" src="../../assets/images/pets-woody.jpg" alt="dog photo">
-              <h4 class="cards-list__card__heading">
-                Woody
-              </h4>
-              <button class="btn__secondary">
-                Learn more
-              </button>
-            </li>
-            <li class="cards-list__card">
-              <img class="cards-list__card__img" src="../../assets/images/pets-sophia.jpg" alt="puppy photo">
-              <h4 class="cards-list__card__heading">
-                Sophia
-              </h4>
-              <button class="btn__secondary">
-                Learn more
-              </button>
-            </li>
-            <li class="cards-list__card">
-              <img class="cards-list__card__img" src="../../assets/images/pets-timmy.jpg" alt="cat photo">
-              <h4 class="cards-list__card__heading">
-                Timmy
-              </h4>
-              <button class="btn__secondary">
-                Learn more
-              </button>
-            </li>
-            <li class="cards-list__card">
-              <img class="cards-list__card__img" src="../../assets/images/pets-charly.jpg" alt="dog photo">
-              <h4 class="cards-list__card__heading">
-                Charly
-              </h4>
-              <button class="btn__secondary">
-                Learn more
-              </button>
-            </li>
-            <li class="cards-list__card">
-              <img class="cards-list__card__img" src="../../assets/images/pets-scarlet.jpg" alt="puppy photo">
-              <h4 class="cards-list__card__heading">
-                Scarlett
-              </h4>
-              <button class="btn__secondary">
-                Learn more
-              </button>
-            </li>
-            <li class="cards-list__card">
-              <img class="cards-list__card__img" src="../../assets/images/pets-freddie.jpg" alt="puppy photo">
-              <h4 class="cards-list__card__heading">
-                Freddie
-              </h4>
-              <button class="btn__secondary">
-                Learn more
-              </button>
-            </li>
-          </ul>
-          <div class="cards-list__navigation">
+            <div class="cards-wrapper"><div id="cards-contanier" class="cards-contanier"></div></div>
+            <div class="cards-navigation">
+            <a href="javascript:firstPage()" id="btn_first" class="btn-round">&lt;&lt;</a>
+            <a href="javascript:prevPage()" id="btn_prev" class="btn-round">&lt;</a>
+            <span id="page">1</span>
+            <a href="javascript:nextPage()" id="btn_next" class="btn-round">&gt;</a>
+            <a href="javascript:lastPage()" id="btn_last" class="btn-round">&gt;&gt;</a>
+          </div>
+          <!-- <div class="cards-list__navigation">
             <button disabled class="btn-round-inactive cards-list__navigation__btn">&lt;&lt;</button>
             <button disabled class="btn-round-inactive cards-list__navigation__btn">&lt;</button>
             <button class="btn-round-active cards-list__navigation__btn">1</button>
             <button class="btn-round cards-list__navigation__btn">&gt;</button>
             <button class="btn-round cards-list__navigation__btn">&gt;&gt;</button>
-          </div>
+          </div> -->
         </div>
       </section>
     </main>
@@ -172,10 +110,14 @@
             </span>
           </a>
         </div>
-
+  
       </div>
       <img class="footer__img" src="../../assets/images/footer-puppy.png" alt="puppy">
     </footer>
+    <div class="popup" id="popup">
+      <div class="popup__wrapper">
+      </div>
+    </div>
   </div>
 </body>
 <script src="pets.js"></script>
