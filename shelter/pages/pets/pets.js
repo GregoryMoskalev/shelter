@@ -6,6 +6,7 @@ const burger = document.querySelector('.navbar__checkbox'),
   popup = document.querySelector('.popup__content'),
   navbar = document.querySelector('.navbar__list'),
   menuItems = document.querySelectorAll('.navbar__item');
+
 let cards = document.querySelectorAll('.card');
 const request = new XMLHttpRequest();
 
@@ -64,7 +65,7 @@ request.onload = () => {
 
 fetch('../../pets.json')
   .then((res) => res.json())
-  .then((list, row = 3) => {
+  .then((list, row = 6) => {
     pets = list;
 
     fullPetsList = (() => {
@@ -83,7 +84,7 @@ fetch('../../pets.json')
       }
       return tempArr;
     })();
-
+    console.log(pets.length);
     fullPetsList = sort863(fullPetsList);
 
     createPage(fullPetsList);
@@ -104,6 +105,7 @@ request.send();
 
 const sort863 = (list) => {
   let unique8List = [];
+
   let length = list.length;
   for (let i = 0; i < length / 8; i++) {
     const uniqueStepList = [];
@@ -123,7 +125,6 @@ const sort863 = (list) => {
     unique8List = [ ...unique8List, ...uniqueStepList ];
   }
   list = unique8List;
-
   list = sort6recursively(list);
 
   return list;
@@ -175,7 +176,7 @@ createCard = (cardList) => {
 };
 
 createPage = (slideList) => {
-  const elem = document.getElementById('cards-contanier');
+  const elem = document.getElementById('cards-container');
   let cardsInPage = 3;
   elem.innerHTML = '';
   if (document.querySelector('html').offsetWidth >= 1280) {
@@ -249,6 +250,25 @@ function createPopup(name) {
   </div>`;
 }
 
+const pageNumber = document.getElementById('pageNumber');
+
+let currentPage = 0;
+document.querySelector('.cards-container').style.bottom = '0px';
+document.getElementById('btn_next').addEventListener('click', () => {
+  const pages = document.querySelectorAll('.page');
+  if (
+    currentPage <
+    document.querySelector('.cards-container').offsetHeight / pages[0].offsetHeight - 1
+  ) {
+    currentPage++;
+    console.log(currentPage + 1);
+  }
+
+  document.querySelector('.cards-container').style.bottom = `calc(${pages[0].offsetHeight *
+    currentPage}px)`;
+  pageNumber.innerHTML = currentPage + 1;
+});
+
 burger.addEventListener('change', disableScrollingOnBody);
 burgerBlackout.addEventListener('click', (evt) =>
   closeOnBackgroundClick(navbar, evt, closeBurger())
@@ -265,4 +285,3 @@ cards.forEach((item) => {
 });
 
 ///
-let current_page = 1;

@@ -9,6 +9,7 @@
   width: 100%;
   max-width: 128rem;
   background-color: $color-light-xl;
+  z-index: 2;
 
   @media only screen and (max-width: $bp-large) {
   }

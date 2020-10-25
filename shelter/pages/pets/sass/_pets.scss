@@ -63,9 +63,12 @@
   }
 }
 
-.cards-contanier {
+.cards-container {
+  position: relative;
+  top: initial;
   width: 120rem;
-  height: 9999rem;
+  z-index: 1;
+  transition: top 0.3s;
 }
 
 .cards-navigation {
@@ -131,7 +134,7 @@
   background-color: $color-light-xl;
 }
 
-#page {
+#pageNumber {
   @extend %h4;
 
   display: flex;
