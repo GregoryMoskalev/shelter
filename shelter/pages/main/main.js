@@ -1,4 +1,3 @@
-
 console.log('ヾ(＾∇＾)');
 const burger = document.querySelector('.navbar__checkbox'),
   slider = document.getElementById('slider'),
@@ -20,9 +19,9 @@ let fullPetsList = []; // 48
 
 function disableScrollingOnBody() {
   if (burger.checked) {
-    document.body.classList.add('disable-scroll');
+    document.querySelector('html').classList.add('disable-scroll');
   } else {
-    document.body.classList.remove('disable-scroll');
+    document.querySelector('html').classList.remove('disable-scroll');
   }
 }
 
@@ -45,14 +44,14 @@ function closeBurger() {
 
 function closePopup() {
   window.location.hash = '#pets';
-  document.body.classList.remove('disable-scroll');
+  document.querySelector('html').classList.remove('disable-scroll');
 }
 
 function openPopup(id) {
   createPopup(id);
 
   window.location.hash = '#popup';
-  document.body.classList.add('disable-scroll');
+  document.querySelector('html').classList.add('disable-scroll');
 }
 
 function findElementByName(name) {
@@ -101,7 +100,19 @@ fetch('../../pets.json')
       // console.log(id);
       item.addEventListener('click', () => openPopup(id));
     });
-  });
+  })
+  .then(
+    () =>
+      (swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        // spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: '.next',
+          prevEl: '.prev'
+        }
+      }))
+  );
 
 request.onload = () => {
   pets = JSON.parse(request.response);
@@ -163,73 +174,12 @@ const sort6recursively = (list) => {
 };
 //########## slider ###########\
 
-// function slide(wrapper, items, prev, next) {
-//   let slides = items.querySelectorAll('.slide'),
-//     slidesLength = slides.length,
-//     slideSize = 1080,
-//     firstSlide = slides[0],
-//     lastSlide = slides[slidesLength - 1],
-//     cloneFirst = firstSlide.cloneNode(true),
-//     cloneLast = lastSlide.cloneNode(true),
-//     index = 0,
-//     allowShift = true;
-
-//   items.appendChild(cloneFirst);
-//   items.appendChild(cloneLast, firstSlide);
-
-//   // Click events
-//   prev.addEventListener('click', function() {
-//     shiftSlide(-1);
-//   });
-//   next.addEventListener('click', function() {
-//     shiftSlide(1);
-//   });
-//   // Transition events
-//   items.addEventListener('transitionend', checkIndex);
-
-//   function shiftSlide(dir, action) {
-//     items.classList.add('shifting');
-
-//     if (allowShift) {
-//       if (!action) {
-//         posInitial = items.offsetLeft;
-//       }
-
-//       if (dir == 1) {
-//         items.style.left = -1080 + 'px';
-//         index++;
-//       } else if (dir == -1) {
-//         items.style.left = 1080 + 'px';
-//         index--;
-//       }
-//     }
-
-//     allowShift = false;
-//   }
-
-//   function checkIndex() {
-//     items.classList.remove('shifting');
-
-//     if (index == -1) {
-//       items.style.left = -(slidesLength * slideSize) + 'px';
-//       index = slidesLength - 1;
-//     }
-
-//     if (index == slidesLength) {
-//       items.style.left = -(1 * slideSize) + 'px';
-//       index = 0;
-//     }
-
-//     allowShift = true;
-//   }
-// }
-
 //######
 
 createCard = (cardList) => {
   let str = '';
   for (let i = 0; i < cardList.length; i++) {
-    str += ` 
+    str += `
     <li data-id="${cardList[i].name}" class="slider__card">
       <img class="slider__card__img" src="${cardList[i].img}" alt="${cardList[i].type} photo">
       <h4 class="slider__card__heading">
@@ -244,15 +194,15 @@ createCard = (cardList) => {
 };
 
 createSlides = (slideList) => {
-  const elem = document.querySelector('.slides');
+  const elem = document.querySelector('.swiper-wrapper');
   let cardsInSlide = 1;
   elem.innerHTML = '';
-  if (document.querySelector('body').offsetWidth >= 1280) {
+  if (document.querySelector('html').offsetWidth >= 1280) {
     cardsInSlide = 3;
-  } else if (document.querySelector('body').offsetWidth >= 768) {
+  } else if (document.querySelector('html').offsetWidth >= 768) {
     cardsInSlide = 2;
   }
-
+  console.log('cardsInSlide', cardsInSlide, 'width', document.querySelector('html').offsetWidth);
   for (let i = 0; i < slideList.length; i += cardsInSlide) {
     const cardList = slideList.slice(i, i + cardsInSlide);
     elem.innerHTML += `<ul class="slide swiper-slide">${createCard(cardList)}</ul>`;
@@ -327,9 +277,9 @@ menuItems.forEach((item) => {
 });
 
 window.addEventListener('resize', () => createSlides(fullPetsList));
-// sliderCards.forEach((item) => {
-//   console.log(item.dataset.id);
-//   item.addEventListener('click', openPopup);
-// });
+sliderCards.forEach((item) => {
+  console.log(item.dataset.id);
+  item.addEventListener('click', openPopup);
+});
 
-// next.addEventListener('click', slide);
+let swiper;

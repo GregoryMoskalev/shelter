@@ -1,3 +1,29 @@
+.swiper-container {
+  width: 99rem;
+  height: 43.5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+
+  @media only screen and (max-width: $bp-large) {
+    padding-left: 1rem;
+    width: 58rem;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    width: 27rem;
+    margin: 1.5rem auto;
+
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
+}
+
+.slide {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
 .pets {
   background-color: $color-light-l;
 
@@ -6,7 +32,7 @@
     flex-direction: column;
     margin-left: 4rem;
     margin-right: 4rem;
-    padding-bottom: 10rem;
+    padding-bottom: 14rem;
 
     @media only screen and (max-width: $bp-large) {
       margin: 0 3rem;
@@ -63,25 +89,6 @@
   }
 
   & .slider {
-    margin: 6rem auto;
-    height: 43.5rem;
-    width: 99rem;
-
-    overflow: hidden;
-
-    @media only screen and (max-width: $bp-large) {
-      padding-left: 1rem;
-      width: 58rem;
-    }
-
-    @media only screen and (max-width: $bp-medium) {
-      width: 27rem;
-      margin: 1.5rem auto;
-
-      grid-row: 1 / 2;
-      grid-column: 1 / -1;
-    }
-
     &__container {
       display: flex;
       flex-direction: row;
@@ -94,20 +101,6 @@
       }
     }
 
-    & > .slides {
-      position: relative;
-      right: 0;
-      display: flex;
-      width: 9999px;
-      height: 43.5rem;
-
-      & > .slide {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-      }
-    }
-
     &__card {
       display: flex;
       flex-direction: column;
@@ -116,7 +109,6 @@
       align-items: center;
       height: 43.5rem;
       width: 27rem;
-      margin-right: 9rem;
 
       border-radius: .9rem;
       background-color: $color-light-s;
@@ -125,8 +117,12 @@
 
       cursor: pointer;
 
-      @media only screen and (max-width: $bp-large) {
-        margin-right: 4rem;
+      &:not(:last-child) {
+        margin-right: 9rem;
+
+        @media only screen and (max-width: $bp-large) {
+          margin-right: 4rem;
+        }
       }
 
       &__img {
@@ -156,7 +152,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0px;
+    margin-top: 3.8rem;
     margin-left: auto;
     margin-right: auto;
     width: 26rem;

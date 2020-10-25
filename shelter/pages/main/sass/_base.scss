@@ -21,12 +21,14 @@ html {
 
 body {
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .disable-scroll {
-  position: absolute;
-  margin: 0 !important;
-  max-height: 100vh !important;
+  // position: absolute;
+  // margin: 0 !important;
+  // max-height: 100vh !important;
   overflow: hidden !important;
 }
 
