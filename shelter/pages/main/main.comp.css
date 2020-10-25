@@ -272,7 +272,9 @@ body {
   @media only screen and (max-width: 47.9375em) {
     .navbar__checkbox:checked ~ .blackout {
       display: initial;
-      background: rgba(41, 41, 41, 0.6); } }
+      background: rgba(41, 41, 41, 0.6);
+      height: 100vh;
+      width: 100%; } }
   @media only screen and (max-width: 47.9375em) {
     .navbar__checkbox:checked ~ .blackout > .navbar__list {
       transform: translateX(-35rem);
@@ -283,10 +285,9 @@ body {
 
 @media only screen and (max-width: 47.9375em) {
   .blackout {
-    display: none;
+    width: 1px;
+    height: 1px;
     background-color: transparent;
-    height: 100vh;
-    width: 100%;
     position: fixed;
     left: 0;
     top: 0;
@@ -491,7 +492,6 @@ body {
   margin-bottom: 4rem; }
   @media only screen and (max-width: 79.9375em) {
     .swiper-container {
-      padding-left: 1rem;
       width: 58rem; } }
   @media only screen and (max-width: 47.9375em) {
     .swiper-container {
@@ -855,10 +855,9 @@ body {
             width: 32.2rem; } }
         @media only screen and (max-width: 47.9375em) {
           .footer__content__column.location {
-            justify-self: center;
+            margin: auto;
             width: 30rem;
-            padding-top: 3.3rem;
-            margin-left: 1rem; } }
+            padding-top: 3.3rem; } }
         .footer__content__column.location > .column__heading {
           margin-bottom: 3.2rem; }
           @media only screen and (max-width: 47.9375em) {
@@ -897,7 +896,7 @@ body {
         margin-left: 23.4rem; } }
     @media only screen and (max-width: 47.9375em) {
       .footer__img {
-        margin-left: 3rem;
+        margin: auto;
         width: 26rem;
         height: 27rem; } }
 
