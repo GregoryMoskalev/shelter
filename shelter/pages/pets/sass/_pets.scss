@@ -49,6 +49,18 @@
   width: 120rem;
   height: 93rem;
   overflow: hidden;
+  margin: 4.5rem 0;
+
+  @media only screen and (max-width: $bp-large) {
+    width: 58rem;
+    height: 136.5rem;
+    margin: 3rem 0;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    width: 27rem;
+    height: 136.5rem;
+    margin: 4rem 0;
+  }
 }
 
 .cards-contanier {
@@ -67,6 +79,10 @@
   column-gap: 4rem;
   row-gap: 3rem;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-medium) {
+    flex-direction: column;
+  }
 }
 
 .card {
