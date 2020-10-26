@@ -95,6 +95,9 @@ fetch('../../pets.json')
       // console.log(id);
       item.addEventListener('click', () => openPopup(id));
     });
+  })
+  .then(() => {
+    disableNavBtns();
   });
 
 request.onload = () => {
@@ -250,24 +253,90 @@ function createPopup(name) {
   </div>`;
 }
 
+//#######################
 const pageNumber = document.getElementById('pageNumber');
-
 let currentPage = 0;
+
+function disableNavBtns() {
+  console.log(
+    'pageNumber',
+    pageNumber.innerHTML,
+    pageNumber.innerHTML == 1,
+    +pageNumber.innerHTML == document.querySelectorAll('.page').length
+  );
+  if (+pageNumber.innerHTML == 1) {
+    console.log('dis prev btns');
+    document.getElementById('btn_first').disabled = true;
+    document.getElementById('btn_prev').disabled = true;
+  } else {
+    document.getElementById('btn_first').disabled = false;
+    document.getElementById('btn_prev').disabled = false;
+  }
+
+  if (+pageNumber.innerHTML == document.querySelectorAll('.page').length) {
+    document.getElementById('btn_last').disabled = true;
+    document.getElementById('btn_next').disabled = true;
+  } else {
+    document.getElementById('btn_last').disabled = false;
+    document.getElementById('btn_next').disabled = false;
+  }
+}
+
+setTimeout(() => {
+  let lastPage = document.querySelectorAll('.page').length;
+  console.log('last page', lastPage);
+}, 1000);
+
 document.querySelector('.cards-container').style.bottom = '0px';
 document.getElementById('btn_next').addEventListener('click', () => {
   const pages = document.querySelectorAll('.page');
+
   if (
     currentPage <
     document.querySelector('.cards-container').offsetHeight / pages[0].offsetHeight - 1
   ) {
     currentPage++;
-    console.log(currentPage + 1);
+    console.log(currentPage);
   }
 
   document.querySelector('.cards-container').style.bottom = `calc(${pages[0].offsetHeight *
     currentPage}px)`;
   pageNumber.innerHTML = currentPage + 1;
+  disableNavBtns();
 });
+
+document.getElementById('btn_first').addEventListener('click', () => {
+  currentPage = 0;
+
+  document.querySelector('.cards-container').style.bottom = 0;
+  pageNumber.innerHTML = currentPage + 1;
+  disableNavBtns();
+});
+
+document.getElementById('btn_last').addEventListener('click', () => {
+  const pages = document.querySelectorAll('.page');
+  currentPage = document.querySelectorAll('.page').length - 1;
+
+  document.querySelector('.cards-container').style.bottom = `calc(${pages[0].offsetHeight *
+    currentPage}px)`;
+  pageNumber.innerHTML = currentPage + 1;
+  disableNavBtns();
+});
+
+document.getElementById('btn_prev').addEventListener('click', () => {
+  const pages = document.querySelectorAll('.page');
+  if (currentPage > 0) {
+    currentPage--;
+    console.log(currentPage - 1);
+  }
+
+  document.querySelector('.cards-container').style.bottom = `calc(${pages[0].offsetHeight *
+    currentPage}px)`;
+  pageNumber.innerHTML = currentPage + 1;
+  disableNavBtns();
+});
+
+//#######################
 
 burger.addEventListener('change', disableScrollingOnBody);
 burgerBlackout.addEventListener('click', (evt) =>

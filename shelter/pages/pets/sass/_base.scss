@@ -123,6 +123,19 @@ body {
   background-color: $color-primary-light;
 }
 
+.btn-round:disabled {
+  border: 2px solid $color-dark-s;
+  color: $color-dark-s;
+
+  cursor: not-allowed;
+}
+
+.btn-round:hover:disabled {
+  border: 2px solid $color-dark-s;
+  color: $color-dark-s;
+  background-color: transparent;
+}
+
 .container {
   display: grid;
   /* grid-template-columns: 438px 162px 600px; */

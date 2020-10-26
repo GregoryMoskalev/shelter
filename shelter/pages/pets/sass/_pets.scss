@@ -68,7 +68,7 @@
   top: initial;
   width: 120rem;
   z-index: 1;
-  transition: top 0.3s;
+  transition: bottom 0.3s;
 }
 
 .cards-navigation {
@@ -133,7 +133,9 @@
 .card:hover {
   background-color: $color-light-xl;
 }
-
+.nav-btn {
+  margin: 0 1rem;
+}
 #pageNumber {
   @extend %h4;
 

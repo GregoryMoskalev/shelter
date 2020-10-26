@@ -142,6 +142,16 @@ body {
   border: 2px solid #fddcc4;
   background-color: #fddcc4; }
 
+.btn-round:disabled {
+  border: 2px solid #cdcdcd;
+  color: #cdcdcd;
+  cursor: not-allowed; }
+
+.btn-round:hover:disabled {
+  border: 2px solid #cdcdcd;
+  color: #cdcdcd;
+  background-color: transparent; }
+
 .container {
   display: grid;
   /* grid-template-columns: 438px 162px 600px; */
@@ -384,7 +394,7 @@ body {
   top: initial;
   width: 120rem;
   z-index: 1;
-  transition: top 0.3s; }
+  transition: bottom 0.3s; }
 
 .cards-navigation {
   display: flex; }
@@ -423,6 +433,9 @@ body {
 
 .card:hover {
   background-color: #ffffff; }
+
+.nav-btn {
+  margin: 0 1rem; }
 
 #pageNumber {
   display: flex;
