@@ -450,12 +450,12 @@ body {
   .card:not(:last-child) {
     margin-right: 0;
     -apple-margin-right: 4rem; }
-  @media only screen and (max-width: 47.9375em) {
-    .card {
-      margin-right: 0;
-      -apple-margin-right: 0;
-      -apple-margin-bottom: 3rem;
-      margin-bottom: 0; } }
+    @media only screen and (max-width: 47.9375em) {
+      .card:not(:last-child) {
+        margin-right: 0;
+        -apple-margin-right: 0;
+        -apple-margin-bottom: 3rem;
+        margin-bottom: 0; } }
   .card__img {
     display: block;
     height: 27rem;
