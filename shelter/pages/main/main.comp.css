@@ -1023,7 +1023,7 @@ body {
   .popup__text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     width: 35rem;
     margin-right: 2rem; }
     @media only screen and (max-width: 79.9375em) {
@@ -1074,7 +1074,7 @@ body {
     padding-left: 1rem; }
     @media only screen and (max-width: 79.9375em) {
       .popup__list {
-        margin-bottom: 3.5rem; } }
+        margin-bottom: .4rem; } }
     @media only screen and (max-width: 47.9375em) {
       .popup__list {
         text-align: left;
