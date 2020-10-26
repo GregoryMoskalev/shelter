@@ -431,13 +431,13 @@ body {
   grid-template-columns: repeat(4, 27rem); }
   @media only screen and (max-width: 79.9375em) {
     .page {
+      height: auto;
       column-gap: 4rem;
       row-gap: 3rem;
       grid-template-columns: repeat(2, 27rem); } }
   @media only screen and (max-width: 47.9375em) {
     .page {
       width: 27rem;
-      height: auto;
       column-gap: 3rem;
       grid-template-columns: 27rem; } }
 
