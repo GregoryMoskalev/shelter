@@ -76,18 +76,24 @@
 }
 
 .page {
-  display: flex;
+  display: grid;
   width: 120rem;
   height: 93rem;
   column-gap: 4rem;
   flex-wrap: wrap;
+  grid-template-columns: repeat(4, 27rem);
+
+  @media only screen and (max-width: $bp-large) {
+    column-gap: 4rem;
+    row-gap: 3rem;
+    grid-template-columns: repeat(2, 27rem);
+  }
 
   @media only screen and (max-width: $bp-medium) {
     width: 27rem;
     height: auto;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 3rem;
+    column-gap: 3rem;
+    grid-template-columns: 27rem;
   }
 }
 
@@ -99,19 +105,6 @@
   align-items: center;
   height: 43.5rem;
   width: 27rem;
-
-  //try to fix ios problem with gap
-  &:not(:last-child) {
-    margin-right: 0;
-    -apple-margin-right: 4rem;
-
-    @media only screen and (max-width: $bp-medium) {
-      margin-right: 0;
-      -apple-margin-right: 0;
-      -apple-margin-bottom: 3rem;
-      margin-bottom: 0;
-    }
-  }
 
   border-radius: .9rem;
   background-color: $color-light-s;
