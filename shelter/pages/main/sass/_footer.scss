@@ -68,7 +68,7 @@
         }
 
         & > .column__heading {
-          margin-bottom: 4.2rem;
+          margin-bottom: 3rem;
 
           @media only screen and (max-width: $bp-medium) {
             margin-bottom: 3rem;
@@ -77,14 +77,16 @@
 
         & .column__link {
           display: flex;
-          justify-content: center;
           height: 4.6rem;
           width: 30rem;
-          margin: auto;
+
+          @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+          }
         }
 
         & .column__link:not(:last-child) {
-          margin-bottom: 4.3rem;
+          margin-bottom: 3rem;
 
           @media only screen and (max-width: $bp-medium) {
             margin-bottom: 3rem;
@@ -169,7 +171,7 @@
     }
 
     @media only screen and (max-width: $bp-medium) {
-      margin: auto;
+      margin: 4rem auto auto auto;
       width: 26rem;
       height: 27rem;
     }

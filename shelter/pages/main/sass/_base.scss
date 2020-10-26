@@ -13,10 +13,15 @@
 
 html {
   font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px
-
+  overflow: scroll;
   background: #e5e5e5;
 
   overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
 
 body {

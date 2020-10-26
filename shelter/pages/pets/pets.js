@@ -181,6 +181,7 @@ createPage = (slideList) => {
   } else if (document.querySelector('html').offsetWidth >= 768) {
     cardsInPage = 6;
   }
+  console.log(cardsInPage);
   for (let i = 0; i < slideList.length; i += cardsInPage) {
     const cardList = slideList.slice(i, i + cardsInPage);
     elem.innerHTML += `<div class="page">${createCard(cardList)}</div>`;
@@ -202,7 +203,7 @@ function createPopup(name) {
 
   const elem = document.querySelector('.popup__wrapper');
   elem.innerHTML = ` 
-  <a href="#pets" class="popup__close btn-arrow"><img  src="../../assets/icons/Vector.svg" alt="X"></a>
+  <a href="#pets" class="popup__close btn-round"><img  src="../../assets/icons/Vector.svg" alt="X"></a>
   <div class="popup__content">
   <div class="popup__image">
     <img src="${card.img}" alt="${card.type}">
