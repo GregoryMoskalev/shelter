@@ -5,9 +5,13 @@ const burger = document.querySelector('.navbar__checkbox'),
   popupBlackout = document.querySelector('.popup'),
   popup = document.querySelector('.popup__content'),
   navbar = document.querySelector('.navbar__list'),
-  menuItems = document.querySelectorAll('.navbar__item');
+  menuItems = document.querySelectorAll('.navbar__item'),
+  cardsWrapper = document.querySelector('.cards-wrapper');
 
 let cards = document.querySelectorAll('.card');
+
+let swiperWidth = cardsWrapper.offsetWidth;
+
 const request = new XMLHttpRequest();
 
 let pets = []; // 8
@@ -328,7 +332,7 @@ menuItems.forEach((item) => {
 
 window.addEventListener('resize', () => {
   let oldWidth = swiperWidth;
-  let newWidth = swiperContainer.offsetWidth;
+  let newWidth = cardsWrapper.offsetWidth;
 
   if (oldWidth !== newWidth) {
     location.reload();
