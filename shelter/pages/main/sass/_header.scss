@@ -87,16 +87,23 @@
   }
 
   &__button {
-    height: 6rem;
-    width: 6rem;
-    position: absolute;
-    top: 0rem;
-    right: 3.8rem;
-    border-radius: 50%;
-    z-index: 1000;
-    transition: all .4s;
+    display: none;
+    height: 1px;
+    width: 1px;
+    // top: 0;
+    @media only screen and (max-width: $bp-medium) {
+      display: block;
+      height: 6rem;
+      width: 6rem;
+      position: absolute;
+      top: 0rem;
+      right: 3.8rem;
+      border-radius: 50%;
+      z-index: 1000;
+      transition: all .4s;
 
-    cursor: pointer;
+      cursor: pointer;
+    }
   }
 
   &__icon {
@@ -228,6 +235,10 @@
   padding-bottom: 4px;
 
   color: $color-dark-s;
+
+  &.disabled {
+    pointer-events: none;
+  }
 
   @media only screen and (max-width: $bp-medium) {
     font-family: Arial;
