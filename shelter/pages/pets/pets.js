@@ -44,6 +44,7 @@ function closePopup() {
 }
 
 function openPopup(id) {
+  console.log('open popup');
   createPopup(id);
 
   window.location.hash = '#popup';
@@ -58,10 +59,6 @@ function findElementByName(name) {
 
 //######################################################
 request.open('GET', '../../pets.json');
-
-request.onload = () => {
-  console.log(request.response);
-};
 
 fetch('../../pets.json')
   .then((res) => res.json())
@@ -84,7 +81,6 @@ fetch('../../pets.json')
       }
       return tempArr;
     })();
-    console.log(pets.length);
     fullPetsList = sort863(fullPetsList);
 
     createPage(fullPetsList);
@@ -92,7 +88,6 @@ fetch('../../pets.json')
   .then(() => {
     cards.forEach((item) => {
       let id = item.dataset.id;
-      // console.log(id);
       item.addEventListener('click', () => openPopup(id));
     });
   })
@@ -155,7 +150,6 @@ const sort6recursively = (list) => {
     }
   }
 
-  console.log(list);
   return list;
 };
 
@@ -187,7 +181,6 @@ createPage = (slideList) => {
   } else if (document.querySelector('html').offsetWidth >= 768) {
     cardsInPage = 6;
   }
-  console.log('cardsInPage', cardsInPage, 'width', document.querySelector('html').offsetWidth);
   for (let i = 0; i < slideList.length; i += cardsInPage) {
     const cardList = slideList.slice(i, i + cardsInPage);
     elem.innerHTML += `<div class="page">${createCard(cardList)}</div>`;
@@ -199,7 +192,7 @@ createPage = (slideList) => {
 //########## createPopup
 
 function createPopup(name) {
-  console.log('inside createPopup');
+  console.log('create popup');
   //find pet info by id
   let card;
 
@@ -207,7 +200,6 @@ function createPopup(name) {
     if (record.name === name) card = record;
   });
 
-  console.log(card);
   const elem = document.querySelector('.popup__wrapper');
   elem.innerHTML = ` 
   <a href="#pets" class="popup__close btn-arrow"><img  src="../../assets/icons/Vector.svg" alt="X"></a>
@@ -258,14 +250,7 @@ const pageNumber = document.getElementById('pageNumber');
 let currentPage = 0;
 
 function disableNavBtns() {
-  console.log(
-    'pageNumber',
-    pageNumber.innerHTML,
-    pageNumber.innerHTML == 1,
-    +pageNumber.innerHTML == document.querySelectorAll('.page').length
-  );
   if (+pageNumber.innerHTML == 1) {
-    console.log('dis prev btns');
     document.getElementById('btn_first').disabled = true;
     document.getElementById('btn_prev').disabled = true;
   } else {
@@ -282,11 +267,6 @@ function disableNavBtns() {
   }
 }
 
-setTimeout(() => {
-  let lastPage = document.querySelectorAll('.page').length;
-  console.log('last page', lastPage);
-}, 1000);
-
 document.querySelector('.cards-container').style.bottom = '0px';
 document.getElementById('btn_next').addEventListener('click', () => {
   const pages = document.querySelectorAll('.page');
@@ -296,7 +276,6 @@ document.getElementById('btn_next').addEventListener('click', () => {
     document.querySelector('.cards-container').offsetHeight / pages[0].offsetHeight - 1
   ) {
     currentPage++;
-    console.log(currentPage);
   }
 
   document.querySelector('.cards-container').style.bottom = `calc(${pages[0].offsetHeight *
@@ -327,7 +306,6 @@ document.getElementById('btn_prev').addEventListener('click', () => {
   const pages = document.querySelectorAll('.page');
   if (currentPage > 0) {
     currentPage--;
-    console.log(currentPage - 1);
   }
 
   document.querySelector('.cards-container').style.bottom = `calc(${pages[0].offsetHeight *
@@ -347,9 +325,11 @@ menuItems.forEach((item) => {
   item.addEventListener('click', () => (burger.checked = false));
 });
 
-window.addEventListener('resize', () => createPage(fullPetsList));
+// createPage(fullPetsList)
+window.addEventListener('resize', () => {
+  location.reload();
+});
 cards.forEach((item) => {
-  console.log(item.dataset.id);
   item.addEventListener('click', openPopup);
 });
 

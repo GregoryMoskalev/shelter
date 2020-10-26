@@ -64,10 +64,6 @@ function findElementByName(name) {
 
 request.open('GET', '../../pets.json');
 
-request.onload = () => {
-  console.log(request.response);
-};
-
 fetch('../../pets.json')
   .then((res) => res.json())
   .then((list, row = 3) => {
@@ -97,7 +93,6 @@ fetch('../../pets.json')
   .then(() => {
     sliderCards.forEach((item) => {
       let id = item.dataset.id;
-      // console.log(id);
       item.addEventListener('click', () => openPopup(id));
     });
   })
@@ -169,7 +164,6 @@ const sort6recursively = (list) => {
     }
   }
 
-  console.log(list);
   return list;
 };
 //########## slider ###########\
@@ -202,7 +196,7 @@ createSlides = (slideList) => {
   } else if (document.querySelector('html').offsetWidth >= 768) {
     cardsInSlide = 2;
   }
-  console.log('cardsInSlide', cardsInSlide, 'width', document.querySelector('html').offsetWidth);
+
   for (let i = 0; i < slideList.length; i += cardsInSlide) {
     const cardList = slideList.slice(i, i + cardsInSlide);
     elem.innerHTML += `<ul class="slide swiper-slide">${createCard(cardList)}</ul>`;
@@ -221,7 +215,6 @@ function createPopup(name) {
     if (record.name === name) card = record;
   });
 
-  console.log(card);
   const elem = document.querySelector('.popup__wrapper');
   elem.innerHTML = ` 
   <a href="#pets" class="popup__close btn-arrow"><img  src="../../assets/icons/Vector.svg" alt="X"></a>
@@ -276,9 +269,10 @@ menuItems.forEach((item) => {
   item.addEventListener('click', () => (burger.checked = false));
 });
 
-window.addEventListener('resize', () => createSlides(fullPetsList));
+// createPage(fullPetsList)
+window.addEventListener('resize', () => {
+  location.reload();
+});
 sliderCards.forEach((item) => {
-  console.log(item.dataset.id);
   item.addEventListener('click', openPopup);
 });
-

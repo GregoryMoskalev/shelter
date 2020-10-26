@@ -182,8 +182,7 @@
 
 .navbar__list {
   display: flex;
-  width: 1px;
-  height: 1px;
+  width: 43rem;
   justify-content: space-between;
   padding-top: 16px;
   list-style: none;
@@ -191,7 +190,8 @@
 
   @media only screen and (max-width: $bp-medium) {
     opacity: 0;
-
+    width: 1px;
+    height: 1px;
     text-align: center;
     justify-content: center;
     flex-direction: column;
