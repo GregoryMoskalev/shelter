@@ -100,20 +100,23 @@
   height: 43.5rem;
   width: 27rem;
 
+  //try to fix ios problem with gap
+  &:not(:last-child) {
+    margin-right: 0;
+    -apple-margin-right: 4rem;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    -apple-margin-right: 0;
+    -apple-margin-bottom: 3rem;
+    margin-bottom: 0;
+  }
+
   border-radius: .9rem;
   background-color: $color-light-s;
 
   transition: all .3s;
 
   cursor: pointer;
-
-  // &:not(:last-child) {
-  //   margin-right: 9rem;
-
-  //   @media only screen and (max-width: $bp-large) {
-  //     margin-right: 4rem;
-  //   }
-  // }
 
   &__img {
     display: block;
