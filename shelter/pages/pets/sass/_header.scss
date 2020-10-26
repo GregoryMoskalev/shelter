@@ -142,6 +142,7 @@
 
   &__checkbox:checked ~ .blackout {
     @media only screen and (max-width: $bp-medium) {
+      opacity: 1;
       height: 100vh;
       width: 100%;
       display: initial;
@@ -151,7 +152,8 @@
 
   &__checkbox:checked ~ .blackout > .navbar__list {
     @media only screen and (max-width: $bp-medium) {
-      transform: translateX(-35rem);
+      // transform: translateX(-35rem);
+      width: 32rem;
       opacity: 1;
     }
   }
@@ -164,23 +166,28 @@
 }
 
 .blackout {
+  width: 1px;
+  height: 1px;
   @media only screen and (max-width: $bp-medium) {
+    opacity: 0;
     width: 1px;
     height: 1px;
     background-color: transparent;
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
-    transition: all .4s;
+    transition: opacity .3s;
   }
 }
 
 .navbar__list {
   display: flex;
+  width: 1px;
+  height: 1px;
   justify-content: space-between;
   padding-top: 16px;
   list-style: none;
-  transition: all .4s;
+  transition: all .3s;
 
   @media only screen and (max-width: $bp-medium) {
     opacity: 0;
@@ -190,11 +197,11 @@
     flex-direction: column;
     position: absolute;
 
-    width: 32rem;
+    width: 0rem;
     height: 100vh;
     top: -3rem;
     padding-top: 2.5rem;
-    right: -35rem;
+    right: 0;
     background-color: $color-light-xl;
   }
 }
