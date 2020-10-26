@@ -10,9 +10,13 @@ const burger = document.querySelector('.navbar__checkbox'),
   navbar = document.querySelector('.navbar__list'),
   menuItems = document.querySelectorAll('.navbar__item'),
   prev = document.querySelector('.prev'),
-  next = document.querySelector('.next');
+  next = document.querySelector('.next'),
+  swiperContainer = document.querySelector('.swiper-container');
 let sliderCards = document.querySelectorAll('.slider__card');
 const request = new XMLHttpRequest();
+
+let swiperWidth = swiperContainer.offsetWidth;
+console.log(swiperWidth);
 
 let pets = []; // 8
 let fullPetsList = []; // 48
@@ -269,10 +273,15 @@ menuItems.forEach((item) => {
   item.addEventListener('click', () => (burger.checked = false));
 });
 
-// createPage(fullPetsList)
 window.addEventListener('resize', () => {
-  location.reload();
+  let oldWidth = swiperWidth;
+  let newWidth = swiperContainer.offsetWidth;
+
+  if (oldWidth !== newWidth) {
+    location.reload();
+  }
 });
+
 sliderCards.forEach((item) => {
   item.addEventListener('click', openPopup);
 });

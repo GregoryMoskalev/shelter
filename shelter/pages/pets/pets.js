@@ -326,9 +326,13 @@ menuItems.forEach((item) => {
   item.addEventListener('click', () => (burger.checked = false));
 });
 
-// createPage(fullPetsList)
 window.addEventListener('resize', () => {
-  location.reload();
+  let oldWidth = swiperWidth;
+  let newWidth = swiperContainer.offsetWidth;
+
+  if (oldWidth !== newWidth) {
+    location.reload();
+  }
 });
 cards.forEach((item) => {
   item.addEventListener('click', openPopup);
