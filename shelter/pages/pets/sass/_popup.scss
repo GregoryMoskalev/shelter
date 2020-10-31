@@ -50,6 +50,7 @@
   }
 
   &__close {
+    padding-bottom: 0;
     align-self: flex-end;
     margin-right: 1rem;
 
@@ -206,5 +207,10 @@
   &__list-item-h5 {
     @extend %h5-modal-window;
     display: inline;
+  }
+
+  &:hover:not(.popup__content:hover) > &__wrapper > .btn-round {
+    border: 2px solid $color-primary-light;
+    background-color: $color-primary-light;
   }
 }

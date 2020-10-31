@@ -207,8 +207,9 @@ function createPopup(name) {
 
   const elem = document.querySelector('.popup__wrapper');
   elem.innerHTML = ` 
-  <a href="#pets" class="popup__close btn-round"><img  src="../../assets/icons/Vector.svg" alt="X"></a>
-  <div class="popup__content">
+  <a href="#pets" id="popup__close" class="popup__close btn-round"><img  src="../../assets/icons/Vector.svg" alt="X"></a>
+  <div class="popup__content" onmouseleave="document.getElementById('popup__close').style=
+  'border: 2px solid #fddcc4; background-color: #fddcc4;'" onmouseenter="document.getElementById('popup__close').style='border: 2px solid #f1cdb3; background-color: transparent;'">
   <div class="popup__image">
     <img src="${card.img}" alt="${card.type}">
   </div>

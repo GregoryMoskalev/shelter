@@ -7,17 +7,17 @@
   <title>Shelter</title>
 </head>
 <body>
-  <div class='wrapper'>
+  <div id="top" class='wrapper'>
     <header class="header">
       <div class="header__container">
-        <div class="logo">
+        <a href="../main/main.html" class="logo">
           <h1 class="logo__title">
             Cozy House
           </h1>
           <h3 class="logo__subtitle">
             Shelter for pets in Boston
           </h3>
-        </div>
+        </a>
         <nav class="navbar">
           <input type="checkbox" class="navbar__checkbox" id="navi-toggle">
           <label for="navi-toggle" class="navbar__button">
@@ -31,7 +31,7 @@
                 </a>
               </li>
               <li class="navbar__item">
-                <a href="../pets/pets.html" class="navbar__link  enabled">
+                <a href="#top" class="navbar__link  enabled">
                   Our pets
                 </a>
               </li>
@@ -114,7 +114,8 @@
       </div>
       <img class="footer__img" src="../../assets/images/footer-puppy.png" alt="puppy">
     </footer>
-    <div class="popup" id="popup">
+    <div class="popup" id="popup" onmouseenter="document.getElementById('popup__close').style=
+    'border: 2px solid #fddcc4; background-color: #fddcc4;'" onmouseleave="document.getElementById('popup__close').style='border: 2px solid #f1cdb3; background-color: transparent;'">
       <div class="popup__wrapper">
       </div>
     </div>

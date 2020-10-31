@@ -9,8 +9,8 @@
   <title>Shelter</title>
 </head>
 <body>
-  <div class="wrapper">
-    <header class="header">
+  <div id="top" class="wrapper">
+    <header  class="header">
       <div class="header__container">
         <div class="logo">
           <h1 class="logo__title">
@@ -28,7 +28,7 @@
           <div class="blackout">
             <ul class="navbar__list">
               <li class="navbar__item">
-                <a href="../main/main.html" class="navbar__link enabled">
+                <a href="#top" class="navbar__link enabled">
                   About the shelter
                 </a>
               </li>
@@ -231,7 +231,8 @@
     </div>
     <img class="footer__img" src="../../assets/images/footer-puppy.png" alt="puppy">
   </footer>
-    <div class="popup" id="popup">
+    <div class="popup" id="popup" onmouseenter="document.getElementById('popup__close').style=
+    'border: 2px solid #fddcc4; background-color: #fddcc4;'" onmouseleave="document.getElementById('popup__close').style='border: 2px solid #f1cdb3; background-color: transparent;'">
       <div class="popup__wrapper">
       </div>
     </div>
