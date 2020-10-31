@@ -607,7 +607,9 @@ body {
     .pets .slider__card .btn__secondary {
       margin-top: 3rem; }
   .pets .slider__card:hover {
-    background-color: #ffffff; }
+    z-index: 100;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04); }
   .pets__btn {
     display: flex;
     justify-content: center;
